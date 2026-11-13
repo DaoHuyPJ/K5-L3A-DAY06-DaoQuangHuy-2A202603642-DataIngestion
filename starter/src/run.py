@@ -12,6 +12,7 @@ Run from the ``starter/`` directory:
     python -m src.run validate        # integrity / traceability checks
     python -m src.run analyze         # breakdown by question type, sizes, latency
     python -m src.run hybrid          # optional BM25 + dense extension (tuned on dev)
+    python -m src.run ablation        # dev-only single-factor steps A -> A800 -> B0 -> B
 
 Strategy C re-uses the B index (identical chunks and vectors) and only adds a
 metadata filter for questions that declare one; this isolates the effect of
@@ -634,6 +635,109 @@ def cmd_hybrid(_: argparse.Namespace) -> None:
     _write_json(RESULTS / "hybrid" / "hybrid_report.json", result)
 
 
+# --------------------------------------------------------------------------- #
+# 10. ablation (dev only): decompose A -> B into single-factor steps
+# --------------------------------------------------------------------------- #
+ABLATIONS: dict[str, dict[str, Any]] = {
+    "A800": {"chunking": "fixed_size", "chunk_size": 800, "overlap": 50, "add_heading": False,
+             "description": "Như A nhưng cửa sổ 800 ký tự (chỉ đổi kích thước so với A)"},
+    "B0": {"chunking": "by_paragraph", "chunk_size": 800, "overlap": 0, "add_heading": False,
+           "description": "Như B nhưng KHÔNG thêm tên Điều (chỉ đổi ranh giới so với A800)"},
+}
+ABLATION_STEPS = [("A", "A800", "kích thước 500 → 800"),
+                  ("A800", "B0", "cửa sổ cố định → ranh giới đoạn/Điều"),
+                  ("B0", "B", "thêm dòng tên Điều cho chunk tiếp nối")]
+
+
+def _structure_proxy(chunks: list[Chunk], units: list[DocumentPage]) -> dict[str, Any]:
+    """Automatic structural proxy (NOT a replacement for manual coherence labels):
+    share of chunks that start/end in the middle of a word, and that mix articles."""
+    U = {u.page: u.text for u in units}
+    n = len(chunks)
+
+    def mid(text: str, i: int) -> bool:
+        return 0 < i < len(text) and text[i - 1].isalnum() and text[i].isalnum()
+
+    start_mid = sum(mid(U[c.page], c.metadata["char_start"]) for c in chunks)
+    end_mid = sum(mid(U[c.page], c.metadata["char_end"]) for c in chunks)
+    multi = sum(len(c.metadata["articles"]) > 1 for c in chunks)
+    return {"chunks": n, "start_mid_word": f"{start_mid}/{n}", "end_mid_word": f"{end_mid}/{n}",
+            "spanning_multiple_articles": f"{multi}/{n}"}
+
+
+def _ablation_chunks(name: str, units: list[DocumentPage]) -> list[Chunk]:
+    cfg = ABLATIONS[name]
+    if cfg["chunking"] == "fixed_size":
+        return [c for u in units for c in fixed_size(u, cfg["chunk_size"], cfg["overlap"], name)]
+    return [c for u in units for c in by_paragraph(u, cfg["chunk_size"], name, add_heading=cfg["add_heading"])]
+
+
+def cmd_ablation(_: argparse.Namespace) -> None:
+    units = load_units()
+    questions = [q for q in json.loads((BENCH / "questions.json").read_text(encoding="utf-8"))["questions"]
+                 if q["split"] == "dev"]
+    embedder = get_embedder()
+    store = get_store(embedder)
+    out_dir = RESULTS / "ablation"
+    report: dict[str, Any] = {"run_at": _now(), "split": "dev only (test not used)",
+                              "configs": ABLATIONS, "steps": [], "indexes": {}, "metrics": {}}
+
+    for name in ABLATIONS:
+        chunks = _ablation_chunks(name, units)
+        t0 = time.perf_counter()
+        vectors = embedder.embed_documents([c.text for c in chunks])
+        upsert = store.upsert(name, chunks, vectors)
+        report["indexes"][name] = {
+            "chunks": len(chunks), "chars": _length_stats([len(c.text) for c in chunks]),
+            "spanning_multiple_articles": sum(len(c.metadata["articles"]) > 1 for c in chunks),
+            "with_context_prefix": sum(bool(c.metadata.get("context_prefix")) for c in chunks),
+            "seconds": round(time.perf_counter() - t0, 2), "upsert": upsert}
+        _write_jsonl(out_dir / f"chunks_{name}.jsonl", [asdict(c) for c in chunks])
+
+    # baseline A and B from the frozen main dev run (identical query vectors & store)
+    main = [t for t in _read_jsonl(RESULTS / "traces" / "traces_dev.jsonl") if t["strategy"] in ("A", "B")]
+    traces = list(main)
+    for name in ABLATIONS:
+        for q in questions:
+            hits = store.search(name, embedder.embed_query(q["question"]), top_k=3)
+            traces.append(evaluate_query(q, hits, name, None))
+    _write_jsonl(out_dir / "traces_ablation_dev.jsonl", [t for t in traces if t["strategy"] in ABLATIONS])
+
+    per = {}
+    for s in ("A", "A800", "B0", "B"):
+        items = [t for t in traces if t["strategy"] == s]
+        per[s] = {"hit_at_1": sum(t["hit_at_1"] for t in items), "hit_at_3": sum(t["hit_at_3"] for t in items),
+                  "N": len(items), "mrr_at_3": round(sum(1 / t["first_hit_rank"] for t in items if t["first_hit_rank"]) / len(items), 3),
+                  "missed": [t["id"] for t in items if not t["hit_at_3"]],
+                  "evidence_split_suspected": [t["id"] for t in items if t["evidence_split_suspected"]],
+                  "rank": {t["id"]: t["first_hit_rank"] for t in items}}
+    report["metrics"] = {s: {k: v for k, v in m.items() if k != "rank"} for s, m in per.items()}
+    for a, b, factor in ABLATION_STEPS:
+        changed = {i: f"{per[a]['rank'][i]}->{per[b]['rank'][i]}" for i in per[a]["rank"]
+                   if per[a]["rank"][i] != per[b]["rank"][i]}
+        report["steps"].append({"from": a, "to": b, "factor": factor,
+                                "hit_at_1": f"{per[a]['hit_at_1']}->{per[b]['hit_at_1']} /{per[a]['N']}",
+                                "hit_at_3": f"{per[a]['hit_at_3']}->{per[b]['hit_at_3']} /{per[a]['N']}",
+                                "first_hit_rank_changes": changed})
+    report["structure_proxy"] = {
+        "A": _structure_proxy(build_chunks("A", units), units),
+        "A800": _structure_proxy(_ablation_chunks("A800", units), units),
+        "B0": _structure_proxy(_ablation_chunks("B0", units), units),
+        "B": _structure_proxy(build_chunks("B", units), units),
+    }
+    _write_json(out_dir / "ablation_report.json", report)
+    for s, p in report["structure_proxy"].items():
+        print("structure", s, p)
+    for s, m in report["metrics"].items():
+        print(f"{s:5s} Hit@1={m['hit_at_1']}/{m['N']} Hit@3={m['hit_at_3']}/{m['N']} MRR={m['mrr_at_3']} "
+              f"missed={m['missed']} split={m['evidence_split_suspected']}")
+    for st in report["steps"]:
+        print(f"{st['from']}->{st['to']} ({st['factor']}): Hit@1 {st['hit_at_1']}, Hit@3 {st['hit_at_3']}, "
+              f"rank changes {st['first_hit_rank_changes']}")
+    for n, d in report["indexes"].items():
+        print(n, d["chunks"], "chunks; mean chars", d["chars"]["mean"], "; multi-article", d["spanning_multiple_articles"])
+
+
 def _write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     fields: list[str] = []
     for r in rows:
@@ -660,6 +764,7 @@ def main() -> None:
     sub.add_parser("validate").set_defaults(func=cmd_validate)
     sub.add_parser("analyze").set_defaults(func=cmd_analyze)
     sub.add_parser("hybrid").set_defaults(func=cmd_hybrid)
+    sub.add_parser("ablation").set_defaults(func=cmd_ablation)
     p = sub.add_parser("audit-sheets")
     p.add_argument("--force", action="store_true", help="overwrite existing manual labels")
     p.set_defaults(func=cmd_audit_sheets)

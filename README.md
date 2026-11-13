@@ -41,6 +41,7 @@ python -m src.run evaluate --split test
 python -m src.run validate        # kiểm tra toàn vẹn
 python -m src.run analyze         # phân tích theo loại câu
 python -m src.run hybrid          # mở rộng tùy chọn BM25 + dense
+python -m src.run ablation        # dev: tách yếu tố A -> A800 -> B0 -> B
 ```
 
 Kết quả được ghi vào `results/` ở thư mục gốc repo. Nhãn thủ công nằm trong `results/manual/`; `audit-sheets` từ chối ghi đè nhãn đã có.

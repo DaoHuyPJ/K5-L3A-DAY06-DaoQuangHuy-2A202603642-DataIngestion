@@ -110,7 +110,8 @@ def _split_long(text: str, offset: int, max_size: int) -> list[tuple[str, int, i
     return [(text[s:e], s + offset, e + offset) for s, e in pieces]
 
 
-def by_paragraph(page: DocumentPage, max_size: int, strategy: str = "B") -> list[Chunk]:
+def by_paragraph(page: DocumentPage, max_size: int, strategy: str = "B",
+                 add_heading: bool = True) -> list[Chunk]:
     """Group consecutive paragraphs of the same article up to ``max_size`` chars.
 
     - Chunks never cross an article ("Điều") boundary.
@@ -119,7 +120,7 @@ def by_paragraph(page: DocumentPage, max_size: int, strategy: str = "B") -> list
     - Continuation chunks of an article get the article heading prepended
       ("Điều N. Tên điều") so they remain self-explanatory; the span metadata
       still points to the original characters, and ``context_prefix`` records
-      the added heading.
+      the added heading.  ``add_heading=False`` disables this (ablation "B0").
     """
     text = page.text
     paras = page.metadata["paragraphs"]
@@ -153,7 +154,7 @@ def by_paragraph(page: DocumentPage, max_size: int, strategy: str = "B") -> list
         body = text[start:end]
         heading = headings.get(article, "")
         prefix = None
-        if heading and not body.lstrip().startswith(heading) and heading not in body:
+        if add_heading and heading and not body.lstrip().startswith(heading) and heading not in body:
             prefix = heading
             body = f"{heading}\n{body}"
         chunks.append(_make_chunk(strategy, page, len(chunks), body, start, end,

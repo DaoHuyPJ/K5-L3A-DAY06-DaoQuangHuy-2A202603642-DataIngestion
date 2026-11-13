@@ -32,7 +32,8 @@ Theo [SUBMISSION.md](../SUBMISSION.md): mã nguồn trong `starter/src/`; dữ l
 │   ├── manual/               # nhãn coherence / metadata / grounding
 │   ├── validation.json       # kết quả `validate`
 │   ├── analysis.json         # kết quả `analyze`
-│   └── hybrid/               # sweep trọng số trên dev + trace hybrid
+│   ├── hybrid/               # sweep trọng số trên dev + trace hybrid
+│   └── ablation/             # A800, B0: chunk, trace dev, báo cáo tách yếu tố
 ├── artifacts/experiment_log.csv
 ├── report/individual/2A202603642_DaoQuangHuy.md
 └── starter/
@@ -79,6 +80,7 @@ python -m src.run audit-sheets    # sinh bảng mẫu chấm thủ công
 python -m src.run validate        # kiểm tra toàn vẹn: span, phủ ký tự, ranh giới Điều, store
 python -m src.run analyze         # phân tích theo loại câu, MRR, token, latency
 python -m src.run hybrid          # mở rộng: BM25 + dense (RRF), chỉnh trọng số trên dev
+python -m src.run ablation        # dev: tách yếu tố A -> A800 (kích thước) -> B0 (ranh giới) -> B (tên Điều)
 ```
 
 Lưu ý: lệnh chạy từ `starter/`, kết quả ghi vào `../results/`. `audit-sheets` từ chối ghi đè khi `results/manual/*.csv` đã có nhãn (cần `--force`).

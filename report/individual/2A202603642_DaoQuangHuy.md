@@ -35,7 +35,7 @@ Mọi đường dẫn bên dưới tính từ thư mục gốc repo (`data/`, `b
   - **A**: cửa sổ cố định 500 ký tự, overlap 50, không theo cấu trúc, không lọc. 451 chunk, trung bình 460 ký tự.
   - **B**: gom các đoạn liên tiếp **trong cùng một Điều**, tối đa 800 ký tự; đoạn quá dài thì tách theo câu (`.;:`); chunk tiếp nối được thêm dòng tên Điều (141/361 chunk); không lọc. 361 chunk, trung bình 548 ký tự.
   - **C**: dùng chính index của B; **khác biệt duy nhất B–C** là `where chapter = …` khi câu hỏi có filter. Câu không có filter chạy y hệt B.
-  - Lưu ý: A–B khác nhau về cả ranh giới chunk, kích thước tối đa (500 so với 800) và dòng tên Điều. Đó là so sánh "chiến lược chunking", không phải một biến duy nhất.
+  - Lưu ý: A–B khác nhau về cả ranh giới chunk, kích thước tối đa (500 so với 800) và dòng tên Điều, nên đó là so sánh "chiến lược chunking", không phải một biến duy nhất. Để tách từng yếu tố, mục **Ablation** bên dưới chạy thêm các bước A → A800 → B0 → B (chỉ trên dev), mỗi bước chỉ đổi một yếu tố.
 - **≥20 câu.**
   - `benchmark/questions.json` có **23 câu: 17 dev / 6 test**, chia trước khi chạy bất kỳ truy xuất nào. Loại câu: trực tiếp, diễn đạt lại, điều kiện/ngoại lệ, và 5 câu metadata filter (q15, q16, q17 thuộc dev; t05, t06 thuộc test). Câu test dùng các Điều không xuất hiện trong dev.
   - Mỗi evidence là trích nguyên văn, được `python -m src.run benchmark` kiểm chứng tồn tại trong corpus đã chuẩn hóa; script cũng kiểm tra giá trị filter có thật và trang gold nằm trong phạm vi filter (`benchmark/verification.json`: 23/23, mỗi câu khớp đúng một đơn vị).
@@ -92,6 +92,28 @@ Mọi đường dẫn bên dưới tính từ thư mục gốc repo (`data/`, `b
 - Tài nguyên: A 451 chunk / 54.778 token, B 361 chunk / 51.784 token (đếm bằng tokenizer của e5 kèm prefix). Thời gian index ~16 s mỗi chiến lược trên CPU.
 - Latency search trung bình (lần chạy test cuối): A 16,2 ms, B 9,0 ms, C 2,7 ms. Số liệu này có nhiễu do thứ tự chạy/warm-up, chỉ mang tính tham khảo.
 
+## Ablation A → B (chỉ dev): tách từng yếu tố
+
+`python -m src.run ablation` → `results/ablation/`.
+- Thêm 2 cấu hình vào 2 collection riêng: **A800** (giống A nhưng cửa sổ 800 ký tự, overlap 50) và **B0** (giống B nhưng không thêm dòng tên Điều).
+- Chạy **chỉ trên 17 câu dev**, không dùng test; A và B lấy từ lần chạy dev chính, cùng vector truy vấn và cùng store.
+- Thí nghiệm này làm sau khi đã chốt lựa chọn, chỉ để giải thích, **không** thay đổi lựa chọn C.
+
+| Bước (chỉ đổi 1 yếu tố) | Hit@1 dev | Hit@3 dev | MRR@3 | Chunk bắt đầu giữa từ | Chunk dính ≥2 Điều | Câu trượt |
+|---|---|---|---|---|---|---|
+| A · fixed 500 | 10/17 | 14/17 | 0,70 | 194/451 | 134/451 | q02, q05, q06 |
+| A800 · fixed **800** (đổi kích thước) | 14/17 | 16/17 | 0,88 | 112/290 | 116/290 | q05 |
+| B0 · theo **Điều** ≤800 (đổi ranh giới) | 13/17 | 16/17 | 0,85 | 0/361 | 0/361 | q06 |
+| B · B0 **+ tên Điều** (đổi ngữ cảnh) | 14/17 | 16/17 | 0,88 | 0/361 | 0/361 | q06 |
+
+- **Kích thước là yếu tố chính về retrieval.** Từ 500 lên 800 ký tự, Hit@1 tăng 10 → 14 và Hit@3 tăng 14 → 16. Cửa sổ lớn hơn chứa trọn evidence của q02 và q06, và đưa q01, q11, q13, q14 lên hạng 1.
+- **Cắt theo Điều không tăng Hit trên dev** (Hit@3 giữ 16/17, Hit@1 giảm 14 → 13). Thứ hạng đổi qua lại:
+  - q05 được sửa: chunk B0 đầu Điều 35 (tên Điều + khoản 1 "45 ngày", dừng ở câu dẫn khoản 2) lên hạng 2. A800 cũng có một cửa sổ bắt đầu đúng tại Điều 35, vì đơn vị trang cắt theo Điều, nhưng cửa sổ này dài 800 ký tự, kéo sang câu dẫn và một phần điểm a của khoản 2 (cắt giữa từ), và không vào top-3; hai chunk Điều 36 (thời hạn báo trước của người sử dụng lao động) cùng một chunk Điều 20 xếp trên.
+  - q06 bị mất: A800 trả về ở hạng 2 một cửa sổ bắt đầu giữa khoản 2 điểm a Điều 35 và chứa trọn danh sách điểm a–g. Chunk B0 tương ứng cũng chứa điểm b nhưng không vào top-3. Hai chunk gần giống nhau mà thứ hạng khác, cho thấy q06 nằm sát ngưỡng chứ không phải lỗi do ranh giới.
+- **Dòng tên Điều** sửa đúng một câu (q01: hạng 2 → 1).
+- **Lợi ích thật của cắt theo Điều nằm ở chất lượng chunk và metadata, không phải Hit.** A800 vẫn có 39% chunk bắt đầu giữa từ và 40% chunk dính nhiều Điều; B0/B là 0%. Nhờ vậy mỗi chunk B thuộc đúng một Điều (trường `articles` chính xác, trích dẫn được), không có evidence bị tách (cờ nghi tách = 0), và coherence thủ công đạt 1,8 so với 0,8 của A. Chỉ số cấu trúc này đo tự động, không thay cho nhãn thủ công; A800 không được chấm coherence thủ công.
+- **Hạn chế:** 17 câu nên chênh lệch 1 câu ≈ 6%. Kết luận "kích thước quan trọng hơn ranh giới về Hit" chỉ áp dụng cho corpus và model này.
+
 ## Mở rộng tùy chọn: hybrid BM25 + dense
 
 `python -m src.run hybrid` → `results/hybrid/` (`starter/src/hybrid.py`).
@@ -113,7 +135,9 @@ Mọi đường dẫn bên dưới tính từ thư mục gốc repo (`data/`, `b
 
 - **So sánh A–B (chunking).**
   - B hơn A ở mọi khía cạnh: Hit@1 dev 14 so với 10, Hit@3 dev 16 so với 14; coherence 1,8 so với 0,8; grounding 1,67 so với 1,50; ít hơn 90 chunk; thời gian gần như nhau.
-  - Nguyên nhân chính: A cắt ngang khoản/điểm, nên evidence dài bị tách qua hai chunk (cờ nghi tách: q02, q06, t05) và chunk mất chủ thể (bắt đầu giữa từ, không có tên Điều).
+  - Ablation cho thấy hai nguồn lợi khác nhau:
+    - **Về Hit**, gần như toàn bộ chênh lệch đến từ **kích thước** chunk: A800 đã đạt 14/17 · 16/17, bằng B. Cửa sổ 500 ký tự quá nhỏ, nên evidence dài bị tách qua hai chunk (cờ nghi tách: q02, q06, t05).
+    - **Về coherence và metadata**, lợi ích đến từ **ranh giới Điều**: không chunk nào bắt đầu giữa từ hay dính nhiều Điều (A800 vẫn 39–40%), `articles` chính xác, trích dẫn được.
   - A vẫn đủ tốt với câu ngắn, evidence gọn trong một dòng (q03, q04, q08–q10, q12: Hit@1).
 - **So sánh B–C (metadata filter).**
   - Trên dev, cả 3 câu filter B đã trúng top-1 nên Hit không đổi. Filter chỉ làm sạch top-2/3 (tuân thủ 0/3 → 3/3).
@@ -126,7 +150,8 @@ Mọi đường dẫn bên dưới tính từ thư mục gốc repo (`data/`, `b
 - **Chiến lược chọn, đánh đổi, điều kiện áp dụng.**
   - Chọn **C**, tức chunk theo cấu trúc Điều + lọc Chương khi có ngữ cảnh. Tiêu chí chốt trước loại được A nhưng hòa giữa B và C; C được chọn vì không kém B ở chỉ số nào và hơn ở tuân thủ filter (ghi trước khi xem test).
   - Đánh đổi: B/C phụ thuộc vào việc parse được cấu trúc Chương/Điều. Chunk có kích thước không đều (101–887 ký tự). Dòng tên Điều thêm vào làm chunk dài hơn chút. Filter cần người dùng/ngữ cảnh cho phạm vi đúng.
-  - Điều kiện áp dụng: văn bản có cấu trúc heading rõ (luật, quy chế, handbook). Với văn bản không có cấu trúc, A là baseline an toàn hơn.
+  - Điều kiện áp dụng: văn bản có cấu trúc heading rõ (luật, quy chế, handbook). Với văn bản không có cấu trúc, cửa sổ cố định vẫn là baseline hợp lý, **nhưng nên dùng cửa sổ ~800 ký tự thay vì 500**: ablation cho thấy A800 đạt Hit ngang B trên dev, chỉ kém về coherence và độ chính xác của metadata Điều.
+  - Nếu được làm lại từ đầu, mình sẽ đưa A800 vào danh sách ứng viên. Theo tiêu chí đã chốt (Hit@3 → Hit@1 → coherence), A800 sẽ hòa B ở Hit dev, và việc phân định sẽ dựa vào coherence thủ công. A800 chưa được chấm tay, nhưng chỉ số cấu trúc (39% chunk bắt đầu giữa từ, 40% dính nhiều Điều, gần với A, vốn được chấm 0,8/2) cho thấy nhiều khả năng B/C vẫn thắng. Kết luận chọn C vì thế vẫn đứng vững, dù lợi thế về Hit của B so với cửa sổ cố định nhỏ hơn mình nghĩ ban đầu.
 - **Hạn chế.**
   - Test chỉ có 6 câu, dev 17 câu: chênh lệch 1 câu = 17% (test) hoặc 6% (dev), nên kết quả chỉ mang tính minh họa trên corpus này, không suy rộng.
   - Một văn bản, cùng văn phong, nên dev/test vẫn có rủi ro rò rỉ về cách diễn đạt.
