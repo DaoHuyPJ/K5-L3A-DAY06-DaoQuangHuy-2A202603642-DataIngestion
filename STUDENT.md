@@ -5,4 +5,4 @@
 - Lớp: L3A
 - Chủ đề và corpus: Bộ luật Lao động 2019 (45/2019/QH14) — toàn văn tiếng Việt, 84 đơn vị trang (82 đơn vị ≥1.500 ký tự)
 - Repo bài nộp: https://github.com/DaoHuyPJ/K5-L3A-DAY06-DaoQuangHuy-2A202603642-DataIngestion
-- Commit chốt bài: 43a1575d25348b9ced62de6881411ebb48a8cba0
+- Commit chốt bài: 5e45e4b2d7764cfdafc49768974a203e2aa85157
