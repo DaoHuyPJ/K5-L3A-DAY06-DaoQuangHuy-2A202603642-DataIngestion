@@ -1,0 +1,535 @@
+{
+  "run_at": "2026-11-13T17:13:24+07:00",
+  "errors": [
+    {
+      "document_id": "BLLD-2019",
+      "page": 2,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 3,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 4,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 5,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 6,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 7,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 8,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 9,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 10,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 11,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 12,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 13,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 14,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 15,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 16,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 17,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 18,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 19,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 20,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 21,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 22,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 23,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 24,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 25,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 26,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 27,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 28,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 29,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 30,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 31,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 32,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 33,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 34,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 35,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 36,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 37,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 38,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 39,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 40,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 41,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 42,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 43,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 44,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 45,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 46,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 47,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 48,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 49,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 50,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 51,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 52,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 53,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 54,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 55,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 56,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 57,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 58,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 59,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 60,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 61,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 62,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 63,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 64,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 65,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 66,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 67,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 68,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 69,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 70,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 71,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 72,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 73,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 74,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 75,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 76,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 77,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 78,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 79,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 80,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 81,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 82,
+      "error": "no_text_layer",
+      "chars": 0
+    },
+    {
+      "document_id": "BLLD-2019",
+      "page": 83,
+      "error": "no_text_layer",
+      "chars": 0
+    }
+  ],
+  "warnings": [
+    {
+      "units_below_1500_chars_not_counted": [
+        6,
+        53
+      ]
+    }
+  ],
+  "official_pdf": {
+    "physical_pages": 83,
+    "pages_with_text": [
+      1
+    ],
+    "pages_without_text": 82,
+    "decision": "PDF là bản scan không có lớp text; không OCR. Dùng bản HTML toàn văn làm nguồn text, PDF chỉ để đối chiếu."
+  },
+  "html_parse": {
+    "html_paragraphs_total": 1343,
+    "excluded_preamble": [
+      "QUỐC HỘI\n--------",
+      "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM\nĐộc lập - Tự do - Hạnh phúc\n---------------",
+      "Bộ luật số: 45/2019/QH14",
+      "Hà Nội, ngày 20 tháng 11 năm 2019",
+      "BỘ LUẬT",
+      "LAO ĐỘNG",
+      "Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam;",
+      "Quốc hội ban hành Bộ luật Lao động."
+    ],
+    "excluded_trailer": [
+      "CHỦ TỊCH QUỐC HỘI\nNguyễn Thị Kim Ngân",
+      "2021 Copyright - Trang thông tin điện tử phổ biến, giáo dục pháp luật thành phố Cần Thơ"
+    ],
+    "articles_found": 220,
+    "chapters_found": 17
+  },
+  "units": 84,
+  "units_counted": 82,
+  "seconds": 0.13
+}

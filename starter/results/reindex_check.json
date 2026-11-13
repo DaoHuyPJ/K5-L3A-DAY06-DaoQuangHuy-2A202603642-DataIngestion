@@ -1,0 +1,66 @@
+{
+  "run_at": "2026-11-13T17:37:08+07:00",
+  "same_version": {
+    "A": {
+      "before": {
+        "rows": 451,
+        "distinct_chunk_ids": 451,
+        "distinct_hashes": 451
+      },
+      "upsert": {
+        "inserted": 0,
+        "updated": 0,
+        "unchanged": 451,
+        "deleted": 0
+      },
+      "after": {
+        "rows": 451,
+        "distinct_chunk_ids": 451,
+        "distinct_hashes": 451
+      },
+      "no_duplicates": true
+    },
+    "B": {
+      "before": {
+        "rows": 361,
+        "distinct_chunk_ids": 361,
+        "distinct_hashes": 361
+      },
+      "upsert": {
+        "inserted": 0,
+        "updated": 0,
+        "unchanged": 361,
+        "deleted": 0
+      },
+      "after": {
+        "rows": 361,
+        "distinct_chunk_ids": 361,
+        "distinct_hashes": 361
+      },
+      "no_duplicates": true
+    }
+  },
+  "changed_document_simulation": {
+    "description": "Nạp 3 đơn vị đầu (chiến lược B) vào collection tạm, sau đó xóa Điều 2 khỏi đơn vị 1 và nạp lại.",
+    "v1_chunks": 13,
+    "v1_upsert": {
+      "inserted": 13,
+      "updated": 0,
+      "unchanged": 0,
+      "deleted": 0
+    },
+    "v2_chunks": 12,
+    "v2_upsert": {
+      "inserted": 0,
+      "updated": 5,
+      "unchanged": 7,
+      "deleted": 1
+    },
+    "db_after": {
+      "rows": 12,
+      "distinct_chunk_ids": 12,
+      "distinct_hashes": 12
+    },
+    "db_ids_equal_v2_ids": true
+  }
+}

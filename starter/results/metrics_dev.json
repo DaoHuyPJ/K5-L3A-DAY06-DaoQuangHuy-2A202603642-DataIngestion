@@ -1,0 +1,162 @@
+{
+  "run_at": "2026-11-13T17:38:04+07:00",
+  "split": "dev",
+  "embedding": {
+    "provider": "local / sentence-transformers",
+    "model": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "dimensions": 384,
+    "max_seq_length": 512,
+    "document_prefix": "passage: ",
+    "query_prefix": "query: ",
+    "normalized": true,
+    "device": "cpu",
+    "sentence_transformers_version": "6.3.0",
+    "torch_version": "2.15.0+cpu",
+    "cost_usd": 0.0
+  },
+  "vector_store": {
+    "chromadb": "1.5.9",
+    "path": "E:\\DataVinUni\\K5-L3A-DAY06-DaoQuangHuy-2A202603642-DataIngestion\\starter\\vectorstore"
+  },
+  "ann_equals_exact_top3": "51/51",
+  "strategies": {
+    "A": {
+      "chunking": "fixed_size",
+      "chunk_size": 500,
+      "overlap": 50,
+      "index": "A",
+      "filter": false,
+      "description": "Cửa sổ 500 ký tự, overlap 50, không theo cấu trúc; không lọc"
+    },
+    "B": {
+      "chunking": "by_paragraph",
+      "chunk_size": 800,
+      "overlap": 0,
+      "index": "B",
+      "filter": false,
+      "description": "Gom đoạn trong cùng một Điều, tối đa 800 ký tự, thêm tên Điều cho chunk tiếp nối; không lọc"
+    },
+    "C": {
+      "chunking": "by_paragraph",
+      "chunk_size": 800,
+      "overlap": 0,
+      "index": "B",
+      "filter": true,
+      "description": "Giống hệt B (cùng index) + lọc theo `chapter` khi câu hỏi có filter"
+    }
+  },
+  "metrics": {
+    "A": {
+      "all": {
+        "N": 17,
+        "hit_at_1": 10,
+        "hit_at_3": 14,
+        "hit_at_1_rate": 0.5882,
+        "hit_at_3_rate": 0.8235,
+        "hit_at_1_str": "10/17",
+        "hit_at_3_str": "14/17",
+        "filter_queries": 3,
+        "filter_compliant": 0,
+        "evidence_split_suspected": [
+          "q02",
+          "q06"
+        ],
+        "missed_ids": [
+          "q02",
+          "q05",
+          "q06"
+        ]
+      },
+      "dev": {
+        "N": 17,
+        "hit_at_1": 10,
+        "hit_at_3": 14,
+        "hit_at_1_rate": 0.5882,
+        "hit_at_3_rate": 0.8235,
+        "hit_at_1_str": "10/17",
+        "hit_at_3_str": "14/17",
+        "filter_queries": 3,
+        "filter_compliant": 0,
+        "evidence_split_suspected": [
+          "q02",
+          "q06"
+        ],
+        "missed_ids": [
+          "q02",
+          "q05",
+          "q06"
+        ]
+      }
+    },
+    "B": {
+      "all": {
+        "N": 17,
+        "hit_at_1": 14,
+        "hit_at_3": 16,
+        "hit_at_1_rate": 0.8235,
+        "hit_at_3_rate": 0.9412,
+        "hit_at_1_str": "14/17",
+        "hit_at_3_str": "16/17",
+        "filter_queries": 3,
+        "filter_compliant": 0,
+        "evidence_split_suspected": [],
+        "missed_ids": [
+          "q06"
+        ]
+      },
+      "dev": {
+        "N": 17,
+        "hit_at_1": 14,
+        "hit_at_3": 16,
+        "hit_at_1_rate": 0.8235,
+        "hit_at_3_rate": 0.9412,
+        "hit_at_1_str": "14/17",
+        "hit_at_3_str": "16/17",
+        "filter_queries": 3,
+        "filter_compliant": 0,
+        "evidence_split_suspected": [],
+        "missed_ids": [
+          "q06"
+        ]
+      }
+    },
+    "C": {
+      "all": {
+        "N": 17,
+        "hit_at_1": 14,
+        "hit_at_3": 16,
+        "hit_at_1_rate": 0.8235,
+        "hit_at_3_rate": 0.9412,
+        "hit_at_1_str": "14/17",
+        "hit_at_3_str": "16/17",
+        "filter_queries": 3,
+        "filter_compliant": 3,
+        "evidence_split_suspected": [],
+        "missed_ids": [
+          "q06"
+        ]
+      },
+      "dev": {
+        "N": 17,
+        "hit_at_1": 14,
+        "hit_at_3": 16,
+        "hit_at_1_rate": 0.8235,
+        "hit_at_3_rate": 0.9412,
+        "hit_at_1_str": "14/17",
+        "hit_at_3_str": "16/17",
+        "filter_queries": 3,
+        "filter_compliant": 3,
+        "evidence_split_suspected": [],
+        "missed_ids": [
+          "q06"
+        ]
+      }
+    }
+  },
+  "mean_search_ms": {
+    "A": 6.52,
+    "B": 5.12,
+    "C": 2.23
+  }
+}

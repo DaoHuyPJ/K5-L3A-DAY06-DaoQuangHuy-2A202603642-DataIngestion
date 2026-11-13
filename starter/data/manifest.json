@@ -1,0 +1,703 @@
+{
+  "corpus": "Bộ luật Lao động 2019 (Việt Nam)",
+  "generated_at": "2026-11-13T17:13:24+07:00",
+  "unit_rule": "Nguồn HTML không phân trang → chia tuần tự thành 'đơn vị trang' gồm các Điều trọn vẹn liên tiếp, mỗi đơn vị >= 1.500 ký tự sau chuẩn hóa NFC; không vượt ranh giới Chương. Chỉ đơn vị >= 1.500 ký tự được tính vào ngưỡng 30. `page` trong metadata/benchmark = số thứ tự đơn vị (1..N).",
+  "sources": [
+    {
+      "source_id": "BLLD-2019",
+      "title": "Bộ luật Lao động số 45/2019/QH14",
+      "issuer": "Quốc hội nước CHXHCN Việt Nam, khóa XIV, kỳ họp thứ 8",
+      "adopted": "2019-11-20",
+      "effective": "2021-01-01 (Điều 220 khoản 1)",
+      "version_note": "Văn bản gốc năm 2019 như được ban hành; KHÔNG phải văn bản hợp nhất. Một số điều đã được sửa đổi về sau; corpus không phản ánh các sửa đổi đó.",
+      "source_path_or_url": "https://pbgdpl.cantho.gov.vn/attachment/261",
+      "local_snapshot": "data/raw/bld2019_pbgdpl_cantho.html",
+      "reference_official_pdf": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2019/12/45.signed.pdf",
+      "license_or_permission": "Văn bản quy phạm pháp luật không thuộc đối tượng bảo hộ quyền tác giả (Điều 15 khoản 2 Luật Sở hữu trí tuệ 2005, sửa đổi). Bản HTML do Trang thông tin PBGDPL TP. Cần Thơ (cơ quan nhà nước) đăng công khai. Không chứa dữ liệu cá nhân.",
+      "accessed_at": "2026-11-13",
+      "physical_pages_official_pdf": 83,
+      "units_total": 84,
+      "units_counted_ge_1500": 82,
+      "units_not_counted": [
+        6,
+        53
+      ],
+      "chars_total": 188880,
+      "excluded": "Phần đầu (quốc hiệu, căn cứ) trước Chương I; chữ ký và footer website sau Điều 220.",
+      "units": [
+        {
+          "page": 1,
+          "unit_id": "BLLD-2019-u001",
+          "chapter": "I",
+          "articles": "1-3",
+          "chars": 3450,
+          "counted": true
+        },
+        {
+          "page": 2,
+          "unit_id": "BLLD-2019-u002",
+          "chapter": "I",
+          "articles": "4-4",
+          "chars": 1502,
+          "counted": true
+        },
+        {
+          "page": 3,
+          "unit_id": "BLLD-2019-u003",
+          "chapter": "I",
+          "articles": "5-5",
+          "chars": 1568,
+          "counted": true
+        },
+        {
+          "page": 4,
+          "unit_id": "BLLD-2019-u004",
+          "chapter": "I",
+          "articles": "6-6",
+          "chars": 1587,
+          "counted": true
+        },
+        {
+          "page": 5,
+          "unit_id": "BLLD-2019-u005",
+          "chapter": "I",
+          "articles": "7-8",
+          "chars": 1909,
+          "counted": true
+        },
+        {
+          "page": 6,
+          "unit_id": "BLLD-2019-u006",
+          "chapter": "II",
+          "articles": "9-12",
+          "chars": 1485,
+          "counted": false
+        },
+        {
+          "page": 7,
+          "unit_id": "BLLD-2019-u007",
+          "chapter": "III",
+          "articles": "13-16",
+          "chars": 2271,
+          "counted": true
+        },
+        {
+          "page": 8,
+          "unit_id": "BLLD-2019-u008",
+          "chapter": "III",
+          "articles": "17-18",
+          "chars": 2140,
+          "counted": true
+        },
+        {
+          "page": 9,
+          "unit_id": "BLLD-2019-u009",
+          "chapter": "III",
+          "articles": "19-20",
+          "chars": 1975,
+          "counted": true
+        },
+        {
+          "page": 10,
+          "unit_id": "BLLD-2019-u010",
+          "chapter": "III",
+          "articles": "21-21",
+          "chars": 1741,
+          "counted": true
+        },
+        {
+          "page": 11,
+          "unit_id": "BLLD-2019-u011",
+          "chapter": "III",
+          "articles": "22-25",
+          "chars": 2005,
+          "counted": true
+        },
+        {
+          "page": 12,
+          "unit_id": "BLLD-2019-u012",
+          "chapter": "III",
+          "articles": "26-29",
+          "chars": 2884,
+          "counted": true
+        },
+        {
+          "page": 13,
+          "unit_id": "BLLD-2019-u013",
+          "chapter": "III",
+          "articles": "30-31",
+          "chars": 1612,
+          "counted": true
+        },
+        {
+          "page": 14,
+          "unit_id": "BLLD-2019-u014",
+          "chapter": "III",
+          "articles": "32-34",
+          "chars": 3142,
+          "counted": true
+        },
+        {
+          "page": 15,
+          "unit_id": "BLLD-2019-u015",
+          "chapter": "III",
+          "articles": "35-35",
+          "chars": 1584,
+          "counted": true
+        },
+        {
+          "page": 16,
+          "unit_id": "BLLD-2019-u016",
+          "chapter": "III",
+          "articles": "36-36",
+          "chars": 2677,
+          "counted": true
+        },
+        {
+          "page": 17,
+          "unit_id": "BLLD-2019-u017",
+          "chapter": "III",
+          "articles": "37-41",
+          "chars": 3020,
+          "counted": true
+        },
+        {
+          "page": 18,
+          "unit_id": "BLLD-2019-u018",
+          "chapter": "III",
+          "articles": "42-42",
+          "chars": 1673,
+          "counted": true
+        },
+        {
+          "page": 19,
+          "unit_id": "BLLD-2019-u019",
+          "chapter": "III",
+          "articles": "43-44",
+          "chars": 1727,
+          "counted": true
+        },
+        {
+          "page": 20,
+          "unit_id": "BLLD-2019-u020",
+          "chapter": "III",
+          "articles": "45-46",
+          "chars": 1874,
+          "counted": true
+        },
+        {
+          "page": 21,
+          "unit_id": "BLLD-2019-u021",
+          "chapter": "III",
+          "articles": "47-48",
+          "chars": 2206,
+          "counted": true
+        },
+        {
+          "page": 22,
+          "unit_id": "BLLD-2019-u022",
+          "chapter": "III",
+          "articles": "49-52",
+          "chars": 1986,
+          "counted": true
+        },
+        {
+          "page": 23,
+          "unit_id": "BLLD-2019-u023",
+          "chapter": "III",
+          "articles": "53-54",
+          "chars": 1576,
+          "counted": true
+        },
+        {
+          "page": 24,
+          "unit_id": "BLLD-2019-u024",
+          "chapter": "III",
+          "articles": "55-56",
+          "chars": 1954,
+          "counted": true
+        },
+        {
+          "page": 25,
+          "unit_id": "BLLD-2019-u025",
+          "chapter": "III",
+          "articles": "57-58",
+          "chars": 1818,
+          "counted": true
+        },
+        {
+          "page": 26,
+          "unit_id": "BLLD-2019-u026",
+          "chapter": "IV",
+          "articles": "59-60",
+          "chars": 1629,
+          "counted": true
+        },
+        {
+          "page": 27,
+          "unit_id": "BLLD-2019-u027",
+          "chapter": "IV",
+          "articles": "61-62",
+          "chars": 2686,
+          "counted": true
+        },
+        {
+          "page": 28,
+          "unit_id": "BLLD-2019-u028",
+          "chapter": "V",
+          "articles": "63-64",
+          "chars": 1795,
+          "counted": true
+        },
+        {
+          "page": 29,
+          "unit_id": "BLLD-2019-u029",
+          "chapter": "V",
+          "articles": "65-68",
+          "chars": 2458,
+          "counted": true
+        },
+        {
+          "page": 30,
+          "unit_id": "BLLD-2019-u030",
+          "chapter": "V",
+          "articles": "69-70",
+          "chars": 3776,
+          "counted": true
+        },
+        {
+          "page": 31,
+          "unit_id": "BLLD-2019-u031",
+          "chapter": "V",
+          "articles": "71-72",
+          "chars": 1598,
+          "counted": true
+        },
+        {
+          "page": 32,
+          "unit_id": "BLLD-2019-u032",
+          "chapter": "V",
+          "articles": "73-74",
+          "chars": 2186,
+          "counted": true
+        },
+        {
+          "page": 33,
+          "unit_id": "BLLD-2019-u033",
+          "chapter": "V",
+          "articles": "75-76",
+          "chars": 2937,
+          "counted": true
+        },
+        {
+          "page": 34,
+          "unit_id": "BLLD-2019-u034",
+          "chapter": "V",
+          "articles": "77-79",
+          "chars": 2289,
+          "counted": true
+        },
+        {
+          "page": 35,
+          "unit_id": "BLLD-2019-u035",
+          "chapter": "V",
+          "articles": "80-81",
+          "chars": 1968,
+          "counted": true
+        },
+        {
+          "page": 36,
+          "unit_id": "BLLD-2019-u036",
+          "chapter": "V",
+          "articles": "82-84",
+          "chars": 2184,
+          "counted": true
+        },
+        {
+          "page": 37,
+          "unit_id": "BLLD-2019-u037",
+          "chapter": "V",
+          "articles": "85-89",
+          "chars": 1929,
+          "counted": true
+        },
+        {
+          "page": 38,
+          "unit_id": "BLLD-2019-u038",
+          "chapter": "VI",
+          "articles": "90-92",
+          "chars": 1830,
+          "counted": true
+        },
+        {
+          "page": 39,
+          "unit_id": "BLLD-2019-u039",
+          "chapter": "VI",
+          "articles": "93-95",
+          "chars": 1946,
+          "counted": true
+        },
+        {
+          "page": 40,
+          "unit_id": "BLLD-2019-u040",
+          "chapter": "VI",
+          "articles": "96-97",
+          "chars": 1597,
+          "counted": true
+        },
+        {
+          "page": 41,
+          "unit_id": "BLLD-2019-u041",
+          "chapter": "VI",
+          "articles": "98-99",
+          "chars": 2044,
+          "counted": true
+        },
+        {
+          "page": 42,
+          "unit_id": "BLLD-2019-u042",
+          "chapter": "VI",
+          "articles": "100-104",
+          "chars": 2754,
+          "counted": true
+        },
+        {
+          "page": 43,
+          "unit_id": "BLLD-2019-u043",
+          "chapter": "VII",
+          "articles": "105-107",
+          "chars": 2695,
+          "counted": true
+        },
+        {
+          "page": 44,
+          "unit_id": "BLLD-2019-u044",
+          "chapter": "VII",
+          "articles": "108-111",
+          "chars": 2032,
+          "counted": true
+        },
+        {
+          "page": 45,
+          "unit_id": "BLLD-2019-u045",
+          "chapter": "VII",
+          "articles": "112-113",
+          "chars": 2361,
+          "counted": true
+        },
+        {
+          "page": 46,
+          "unit_id": "BLLD-2019-u046",
+          "chapter": "VII",
+          "articles": "114-116",
+          "chars": 1975,
+          "counted": true
+        },
+        {
+          "page": 47,
+          "unit_id": "BLLD-2019-u047",
+          "chapter": "VIII",
+          "articles": "117-118",
+          "chars": 1627,
+          "counted": true
+        },
+        {
+          "page": 48,
+          "unit_id": "BLLD-2019-u048",
+          "chapter": "VIII",
+          "articles": "119-120",
+          "chars": 1559,
+          "counted": true
+        },
+        {
+          "page": 49,
+          "unit_id": "BLLD-2019-u049",
+          "chapter": "VIII",
+          "articles": "121-122",
+          "chars": 1954,
+          "counted": true
+        },
+        {
+          "page": 50,
+          "unit_id": "BLLD-2019-u050",
+          "chapter": "VIII",
+          "articles": "123-125",
+          "chars": 2092,
+          "counted": true
+        },
+        {
+          "page": 51,
+          "unit_id": "BLLD-2019-u051",
+          "chapter": "VIII",
+          "articles": "126-128",
+          "chars": 1961,
+          "counted": true
+        },
+        {
+          "page": 52,
+          "unit_id": "BLLD-2019-u052",
+          "chapter": "VIII",
+          "articles": "129-131",
+          "chars": 1932,
+          "counted": true
+        },
+        {
+          "page": 53,
+          "unit_id": "BLLD-2019-u053",
+          "chapter": "IX",
+          "articles": "132-134",
+          "chars": 997,
+          "counted": false
+        },
+        {
+          "page": 54,
+          "unit_id": "BLLD-2019-u054",
+          "chapter": "X",
+          "articles": "135-136",
+          "chars": 1753,
+          "counted": true
+        },
+        {
+          "page": 55,
+          "unit_id": "BLLD-2019-u055",
+          "chapter": "X",
+          "articles": "137-137",
+          "chars": 1807,
+          "counted": true
+        },
+        {
+          "page": 56,
+          "unit_id": "BLLD-2019-u056",
+          "chapter": "X",
+          "articles": "138-142",
+          "chars": 3646,
+          "counted": true
+        },
+        {
+          "page": 57,
+          "unit_id": "BLLD-2019-u057",
+          "chapter": "XI",
+          "articles": "143-145",
+          "chars": 2642,
+          "counted": true
+        },
+        {
+          "page": 58,
+          "unit_id": "BLLD-2019-u058",
+          "chapter": "XI",
+          "articles": "146-147",
+          "chars": 1803,
+          "counted": true
+        },
+        {
+          "page": 59,
+          "unit_id": "BLLD-2019-u059",
+          "chapter": "XI",
+          "articles": "148-150",
+          "chars": 2395,
+          "counted": true
+        },
+        {
+          "page": 60,
+          "unit_id": "BLLD-2019-u060",
+          "chapter": "XI",
+          "articles": "151-152",
+          "chars": 2129,
+          "counted": true
+        },
+        {
+          "page": 61,
+          "unit_id": "BLLD-2019-u061",
+          "chapter": "XI",
+          "articles": "153-154",
+          "chars": 1756,
+          "counted": true
+        },
+        {
+          "page": 62,
+          "unit_id": "BLLD-2019-u062",
+          "chapter": "XI",
+          "articles": "155-158",
+          "chars": 1560,
+          "counted": true
+        },
+        {
+          "page": 63,
+          "unit_id": "BLLD-2019-u063",
+          "chapter": "XI",
+          "articles": "159-161",
+          "chars": 1501,
+          "counted": true
+        },
+        {
+          "page": 64,
+          "unit_id": "BLLD-2019-u064",
+          "chapter": "XI",
+          "articles": "162-167",
+          "chars": 2732,
+          "counted": true
+        },
+        {
+          "page": 65,
+          "unit_id": "BLLD-2019-u065",
+          "chapter": "XII",
+          "articles": "168-169",
+          "chars": 2450,
+          "counted": true
+        },
+        {
+          "page": 66,
+          "unit_id": "BLLD-2019-u066",
+          "chapter": "XIII",
+          "articles": "170-172",
+          "chars": 2143,
+          "counted": true
+        },
+        {
+          "page": 67,
+          "unit_id": "BLLD-2019-u067",
+          "chapter": "XIII",
+          "articles": "173-174",
+          "chars": 2493,
+          "counted": true
+        },
+        {
+          "page": 68,
+          "unit_id": "BLLD-2019-u068",
+          "chapter": "XIII",
+          "articles": "175-176",
+          "chars": 2719,
+          "counted": true
+        },
+        {
+          "page": 69,
+          "unit_id": "BLLD-2019-u069",
+          "chapter": "XIII",
+          "articles": "177-178",
+          "chars": 2620,
+          "counted": true
+        },
+        {
+          "page": 70,
+          "unit_id": "BLLD-2019-u070",
+          "chapter": "XIV",
+          "articles": "179-179",
+          "chars": 1910,
+          "counted": true
+        },
+        {
+          "page": 71,
+          "unit_id": "BLLD-2019-u071",
+          "chapter": "XIV",
+          "articles": "180-181",
+          "chars": 1845,
+          "counted": true
+        },
+        {
+          "page": 72,
+          "unit_id": "BLLD-2019-u072",
+          "chapter": "XIV",
+          "articles": "182-185",
+          "chars": 4204,
+          "counted": true
+        },
+        {
+          "page": 73,
+          "unit_id": "BLLD-2019-u073",
+          "chapter": "XIV",
+          "articles": "186-188",
+          "chars": 3772,
+          "counted": true
+        },
+        {
+          "page": 74,
+          "unit_id": "BLLD-2019-u074",
+          "chapter": "XIV",
+          "articles": "189-190",
+          "chars": 2217,
+          "counted": true
+        },
+        {
+          "page": 75,
+          "unit_id": "BLLD-2019-u075",
+          "chapter": "XIV",
+          "articles": "191-193",
+          "chars": 3284,
+          "counted": true
+        },
+        {
+          "page": 76,
+          "unit_id": "BLLD-2019-u076",
+          "chapter": "XIV",
+          "articles": "194-196",
+          "chars": 2233,
+          "counted": true
+        },
+        {
+          "page": 77,
+          "unit_id": "BLLD-2019-u077",
+          "chapter": "XIV",
+          "articles": "197-197",
+          "chars": 1674,
+          "counted": true
+        },
+        {
+          "page": 78,
+          "unit_id": "BLLD-2019-u078",
+          "chapter": "XIV",
+          "articles": "198-201",
+          "chars": 2245,
+          "counted": true
+        },
+        {
+          "page": 79,
+          "unit_id": "BLLD-2019-u079",
+          "chapter": "XIV",
+          "articles": "202-203",
+          "chars": 1996,
+          "counted": true
+        },
+        {
+          "page": 80,
+          "unit_id": "BLLD-2019-u080",
+          "chapter": "XIV",
+          "articles": "204-207",
+          "chars": 1787,
+          "counted": true
+        },
+        {
+          "page": 81,
+          "unit_id": "BLLD-2019-u081",
+          "chapter": "XIV",
+          "articles": "208-211",
+          "chars": 2512,
+          "counted": true
+        },
+        {
+          "page": 82,
+          "unit_id": "BLLD-2019-u082",
+          "chapter": "XV",
+          "articles": "212-213",
+          "chars": 1931,
+          "counted": true
+        },
+        {
+          "page": 83,
+          "unit_id": "BLLD-2019-u083",
+          "chapter": "XVI",
+          "articles": "214-217",
+          "chars": 2445,
+          "counted": true
+        },
+        {
+          "page": 84,
+          "unit_id": "BLLD-2019-u084",
+          "chapter": "XVII",
+          "articles": "218-220",
+          "chars": 8519,
+          "counted": true
+        }
+      ]
+    }
+  ]
+}

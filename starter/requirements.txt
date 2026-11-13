@@ -1,4 +1,10 @@
-# Core setup and PDF parsing. Choose and install an embedding SDK separately.
-psycopg[binary]==3.3.8
-pypdf>=5,<7
-python-dotenv>=1,<2
+# Versions used for the reported run (Python 3.12.10, Windows 11, CPU only).
+# Install torch CPU first to avoid the large CUDA build:
+#   pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+torch==2.15.0
+sentence-transformers==6.3.0
+transformers==5.22.2
+chromadb==1.5.9
+numpy==2.5.4
+pymupdf==2.1
+python-dotenv==1.2.4

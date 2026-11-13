@@ -1,0 +1,133 @@
+{
+  "run_at": "2026-11-13T17:36:12+07:00",
+  "embedding": {
+    "provider": "local / sentence-transformers",
+    "model": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "dimensions": 384,
+    "max_seq_length": 512,
+    "document_prefix": "passage: ",
+    "query_prefix": "query: ",
+    "normalized": true,
+    "device": "cpu",
+    "sentence_transformers_version": "6.3.0",
+    "torch_version": "2.15.0+cpu",
+    "cost_usd": 0.0
+  },
+  "vector_store": {
+    "chromadb": "1.5.9",
+    "path": "E:\\DataVinUni\\K5-L3A-DAY06-DaoQuangHuy-2A202603642-DataIngestion\\starter\\vectorstore",
+    "client": "chromadb.PersistentClient",
+    "collections": [
+      "bld2019_A",
+      "bld2019_B"
+    ],
+    "metric": "cosine (hnsw:space=cosine)",
+    "search": "approximate HNSW; verified against brute-force in evaluate"
+  },
+  "python": "3.12.10",
+  "strategies": {
+    "A": {
+      "config": {
+        "chunking": "fixed_size",
+        "chunk_size": 500,
+        "overlap": 50,
+        "index": "A",
+        "filter": false,
+        "description": "Cửa sổ 500 ký tự, overlap 50, không theo cấu trúc; không lọc"
+      },
+      "chunks": 451,
+      "chars": {
+        "count": 451,
+        "total": 207230,
+        "mean": 459.5,
+        "median": 500,
+        "min": 54,
+        "max": 500,
+        "p10": 277,
+        "p90": 500
+      },
+      "tokens": {
+        "count": 451,
+        "total": 54778,
+        "mean": 121.5,
+        "median": 130,
+        "min": 19,
+        "max": 163,
+        "p10": 76,
+        "p90": 140
+      },
+      "truncated_over_max_seq": 0,
+      "with_context_prefix": 0,
+      "seconds": {
+        "chunking": 0.01,
+        "embedding": 16.36,
+        "upsert": 0.49,
+        "total": 16.85
+      },
+      "upsert": {
+        "inserted": 451,
+        "updated": 0,
+        "unchanged": 0,
+        "deleted": 0
+      },
+      "db_count_after": {
+        "rows": 451,
+        "distinct_chunk_ids": 451,
+        "distinct_hashes": 451
+      },
+      "cost_usd": 0.0
+    },
+    "B": {
+      "config": {
+        "chunking": "by_paragraph",
+        "chunk_size": 800,
+        "overlap": 0,
+        "index": "B",
+        "filter": false,
+        "description": "Gom đoạn trong cùng một Điều, tối đa 800 ký tự, thêm tên Điều cho chunk tiếp nối; không lọc"
+      },
+      "chunks": 361,
+      "chars": {
+        "count": 361,
+        "total": 197674,
+        "mean": 547.6,
+        "median": 583,
+        "min": 101,
+        "max": 887,
+        "p10": 260,
+        "p90": 771
+      },
+      "tokens": {
+        "count": 361,
+        "total": 51784,
+        "mean": 143.4,
+        "median": 153,
+        "min": 30,
+        "max": 238,
+        "p10": 70,
+        "p90": 201
+      },
+      "truncated_over_max_seq": 0,
+      "with_context_prefix": 141,
+      "seconds": {
+        "chunking": 0.01,
+        "embedding": 15.75,
+        "upsert": 0.44,
+        "total": 16.19
+      },
+      "upsert": {
+        "inserted": 361,
+        "updated": 0,
+        "unchanged": 0,
+        "deleted": 0
+      },
+      "db_count_after": {
+        "rows": 361,
+        "distinct_chunk_ids": 361,
+        "distinct_hashes": 361
+      },
+      "cost_usd": 0.0
+    }
+  }
+}

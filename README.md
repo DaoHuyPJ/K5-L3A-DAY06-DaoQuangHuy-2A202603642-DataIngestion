@@ -1,5 +1,10 @@
 # Day 06 · Data Ingestion Engineering
 
+> **Bài làm — Đào Quang Huy (2A202603642):** corpus Bộ luật Lao động 2019, Chroma + `multilingual-e5-small`.
+> Setup/chạy: [starter/README.md](starter/README.md) · Báo cáo: [report/individual/2A202603642_DaoQuangHuy.md](report/individual/2A202603642_DaoQuangHuy.md)
+> · Manifest: [starter/data/manifest.json](starter/data/manifest.json) · Benchmark: [starter/benchmark/](starter/benchmark/)
+> · Kết quả/trace/nhãn: [starter/results/](starter/results/) · Nhật ký: [artifacts/experiment_log.csv](artifacts/experiment_log.csv)
+
 **Lab cá nhân** · **4 giờ** · **Dữ liệu tự chọn**
 
 Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, rồi đo xem cách chuẩn bị dữ liệu nào hiệu quả nhất.

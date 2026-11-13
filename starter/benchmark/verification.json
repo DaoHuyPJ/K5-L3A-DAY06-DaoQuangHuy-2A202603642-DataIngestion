@@ -1,0 +1,222 @@
+{
+  "verified_at": "2026-11-13T17:58:16+07:00",
+  "questions": 23,
+  "splits": {
+    "dev": 17,
+    "test": 6
+  },
+  "filter_questions": {
+    "dev": 3,
+    "test": 2
+  },
+  "problems": [],
+  "items": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "gold_page": 9,
+      "evidence_chars": 75,
+      "found_in_units": [
+        9
+      ]
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "gold_page": 9,
+      "evidence_chars": 226,
+      "found_in_units": [
+        9
+      ]
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "gold_page": 11,
+      "evidence_chars": 114,
+      "found_in_units": [
+        11
+      ]
+    },
+    {
+      "id": "q04",
+      "split": "dev",
+      "gold_page": 12,
+      "evidence_chars": 48,
+      "found_in_units": [
+        12
+      ]
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "gold_page": 15,
+      "evidence_chars": 75,
+      "found_in_units": [
+        15
+      ]
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "gold_page": 15,
+      "evidence_chars": 119,
+      "found_in_units": [
+        15
+      ]
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "gold_page": 21,
+      "evidence_chars": 82,
+      "found_in_units": [
+        21
+      ]
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "gold_page": 21,
+      "evidence_chars": 233,
+      "found_in_units": [
+        21
+      ]
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "gold_page": 23,
+      "evidence_chars": 73,
+      "found_in_units": [
+        23
+      ]
+    },
+    {
+      "id": "q10",
+      "split": "dev",
+      "gold_page": 41,
+      "evidence_chars": 42,
+      "found_in_units": [
+        41
+      ]
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "gold_page": 43,
+      "evidence_chars": 70,
+      "found_in_units": [
+        43
+      ]
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "gold_page": 43,
+      "evidence_chars": 155,
+      "found_in_units": [
+        43
+      ]
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "gold_page": 45,
+      "evidence_chars": 20,
+      "found_in_units": [
+        45
+      ]
+    },
+    {
+      "id": "q14",
+      "split": "dev",
+      "gold_page": 46,
+      "evidence_chars": 21,
+      "found_in_units": [
+        46
+      ]
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "gold_page": 50,
+      "evidence_chars": 190,
+      "found_in_units": [
+        50
+      ]
+    },
+    {
+      "id": "q16",
+      "split": "dev",
+      "gold_page": 55,
+      "evidence_chars": 95,
+      "found_in_units": [
+        55
+      ]
+    },
+    {
+      "id": "q17",
+      "split": "dev",
+      "gold_page": 58,
+      "evidence_chars": 122,
+      "found_in_units": [
+        58
+      ]
+    },
+    {
+      "id": "t01",
+      "split": "test",
+      "gold_page": 50,
+      "evidence_chars": 89,
+      "found_in_units": [
+        50
+      ]
+    },
+    {
+      "id": "t02",
+      "split": "test",
+      "gold_page": 56,
+      "evidence_chars": 119,
+      "found_in_units": [
+        56
+      ]
+    },
+    {
+      "id": "t03",
+      "split": "test",
+      "gold_page": 45,
+      "evidence_chars": 142,
+      "found_in_units": [
+        45
+      ]
+    },
+    {
+      "id": "t04",
+      "split": "test",
+      "gold_page": 65,
+      "evidence_chars": 133,
+      "found_in_units": [
+        65
+      ]
+    },
+    {
+      "id": "t05",
+      "split": "test",
+      "gold_page": 74,
+      "evidence_chars": 179,
+      "found_in_units": [
+        74
+      ]
+    },
+    {
+      "id": "t06",
+      "split": "test",
+      "gold_page": 64,
+      "evidence_chars": 107,
+      "found_in_units": [
+        64
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+﻿position_id,page,offset,strategy,chunk_id,chunk_chars,chunk_text,score_0_2,reason,annotator
+P01,1,1725,A,A:BLLD-2019:u001:c003,500,"rên cơ sở tự nguyện của người lao động tại một đơn vị sử dụng lao động nhằm mục đích bảo vệ quyền và lợi ích hợp pháp, chính đáng của người lao động trong quan hệ lao động thông qua thương lượng tập thể hoặc các hình thức khác theo quy định của pháp luật về lao động. Tổ chức đại diện người lao động tại cơ sở bao gồm công đoàn cơ sở và tổ chức của người lao động tại doanh nghiệp.
+4. Tổ chức đại diện người sử dụng lao động là tổ chức được thành lập hợp pháp, đại diện và bảo vệ quyền, lợi ích hợp p",0,"Bắt đầu giữa từ ('rên cơ sở...'), mất chủ thể của định nghĩa khoản 3 (Tổ chức đại diện NLĐ tại cơ sở); khoản 4 bị cắt giữa câu.",Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P01,1,1725,B,B:BLLD-2019:u001:c003,652,"Điều 3. Giải thích từ ngữ
+3. Tổ chức đại diện người lao động tại cơ sở là tổ chức được thành lập trên cơ sở tự nguyện của người lao động tại một đơn vị sử dụng lao động nhằm mục đích bảo vệ quyền và lợi ích hợp pháp, chính đáng của người lao động trong quan hệ lao động thông qua thương lượng tập thể hoặc các hình thức khác theo quy định của pháp luật về lao động. Tổ chức đại diện người lao động tại cơ sở bao gồm công đoàn cơ sở và tổ chức của người lao động tại doanh nghiệp.
+4. Tổ chức đại diện người sử dụng lao động là tổ chức được thành lập hợp pháp, đại diện và bảo vệ quyền, lợi ích hợp pháp của người sử dụng lao động trong quan hệ lao động.",2,Có tên Điều 3 + trọn khoản 3 và 4; mỗi định nghĩa tự hiểu được.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P01,1,1725,C,B:BLLD-2019:u001:c003,652,"Điều 3. Giải thích từ ngữ
+3. Tổ chức đại diện người lao động tại cơ sở là tổ chức được thành lập trên cơ sở tự nguyện của người lao động tại một đơn vị sử dụng lao động nhằm mục đích bảo vệ quyền và lợi ích hợp pháp, chính đáng của người lao động trong quan hệ lao động thông qua thương lượng tập thể hoặc các hình thức khác theo quy định của pháp luật về lao động. Tổ chức đại diện người lao động tại cơ sở bao gồm công đoàn cơ sở và tổ chức của người lao động tại doanh nghiệp.
+4. Tổ chức đại diện người sử dụng lao động là tổ chức được thành lập hợp pháp, đại diện và bảo vệ quyền, lợi ích hợp pháp của người sử dụng lao động trong quan hệ lao động.",2,C dùng chung chunk với B: Có tên Điều 3 + trọn khoản 3 và 4; mỗi định nghĩa tự hiểu được.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P02,2,751,A,A:BLLD-2019:u002:c001,500,"ều kiện thuận lợi đối với hoạt động tạo việc làm, tự tạo việc làm, dạy nghề và học nghề để có việc làm; hoạt động sản xuất, kinh doanh thu hút nhiều lao động; áp dụng một số quy định của Bộ luật này đối với người làm việc không có quan hệ lao động.
+4. Có chính sách phát triển, phân bố nguồn nhân lực; nâng cao năng suất lao động; đào tạo, bồi dưỡng và nâng cao trình độ, kỹ năng nghề cho người lao động; hỗ trợ duy trì, chuyển đổi nghề nghiệp, việc làm cho người lao động; ưu đãi đối với người lao đ",1,"Đầu cắt giữa từ ('ều kiện...'), khoản 4 trọn ý nhưng không biết là 'chính sách của Nhà nước'; cuối cắt giữa câu.",Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P02,2,751,B,B:BLLD-2019:u002:c001,668,"Điều 4. Chính sách của Nhà nước về lao động
+4. Có chính sách phát triển, phân bố nguồn nhân lực; nâng cao năng suất lao động; đào tạo, bồi dưỡng và nâng cao trình độ, kỹ năng nghề cho người lao động; hỗ trợ duy trì, chuyển đổi nghề nghiệp, việc làm cho người lao động; ưu đãi đối với người lao động có trình độ chuyên môn, kỹ thuật cao đáp ứng yêu cầu của cách mạng công nghiệp, sự nghiệp công nghiệp hóa, hiện đại hóa đất nước.
+5. Có chính sách phát triển thị trường lao động, đa dạng các hình thức kết nối cung, cầu lao động.
+6. Thúc đẩy người lao động và người sử dụng lao động đối thoại, thương lượng tập thể, xây dựng quan hệ lao động tiến bộ, hài hòa và ổn định.",2,Tên Điều 4 + trọn khoản 4–6.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P02,2,751,C,B:BLLD-2019:u002:c001,668,"Điều 4. Chính sách của Nhà nước về lao động
+4. Có chính sách phát triển, phân bố nguồn nhân lực; nâng cao năng suất lao động; đào tạo, bồi dưỡng và nâng cao trình độ, kỹ năng nghề cho người lao động; hỗ trợ duy trì, chuyển đổi nghề nghiệp, việc làm cho người lao động; ưu đãi đối với người lao động có trình độ chuyên môn, kỹ thuật cao đáp ứng yêu cầu của cách mạng công nghiệp, sự nghiệp công nghiệp hóa, hiện đại hóa đất nước.
+5. Có chính sách phát triển thị trường lao động, đa dạng các hình thức kết nối cung, cầu lao động.
+6. Thúc đẩy người lao động và người sử dụng lao động đối thoại, thương lượng tập thể, xây dựng quan hệ lao động tiến bộ, hài hòa và ổn định.",2,C dùng chung chunk với B: Tên Điều 4 + trọn khoản 4–6.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P03,3,784,A,A:BLLD-2019:u003:c001,500,"ao động; nghỉ theo chế độ, nghỉ hằng năm có hưởng lương và được hưởng phúc lợi tập thể;
+c) Thành lập, gia nhập, hoạt động trong tổ chức đại diện người lao động, tổ chức nghề nghiệp và tổ chức khác theo quy định của pháp luật; yêu cầu và tham gia đối thoại, thực hiện quy chế dân chủ, thương lượng tập thể với người sử dụng lao động và được tham vấn tại nơi làm việc để bảo vệ quyền và lợi ích hợp pháp, chính đáng của mình; tham gia quản lý theo nội quy của người sử dụng lao động;
+d) Từ chối làm việ",1,"Bắt đầu giữa liệt kê quyền, không có chủ thể 'người lao động có các quyền'; điểm d bị cắt.",Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P03,3,784,B,B:BLLD-2019:u003:c001,792,"Điều 5. Quyền và nghĩa vụ của người lao động
+c) Thành lập, gia nhập, hoạt động trong tổ chức đại diện người lao động, tổ chức nghề nghiệp và tổ chức khác theo quy định của pháp luật; yêu cầu và tham gia đối thoại, thực hiện quy chế dân chủ, thương lượng tập thể với người sử dụng lao động và được tham vấn tại nơi làm việc để bảo vệ quyền và lợi ích hợp pháp, chính đáng của mình; tham gia quản lý theo nội quy của người sử dụng lao động;
+d) Từ chối làm việc nếu có nguy cơ rõ ràng đe dọa trực tiếp đến tính mạng, sức khỏe trong quá trình thực hiện công việc;
+đ) Đơn phương chấm dứt hợp đồng lao động;
+e) Đình công;
+g) Các quyền khác theo quy định của pháp luật.
+2. Người lao động có các nghĩa vụ sau đây:
+a) Thực hiện hợp đồng lao động, thỏa ước lao động tập thể và thỏa thuận hợp pháp khác;",1,Có tên Điều 5 nhưng thiếu câu dẫn khoản 1 cho các điểm c–g; khoản 2 dừng sau điểm a.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P03,3,784,C,B:BLLD-2019:u003:c001,792,"Điều 5. Quyền và nghĩa vụ của người lao động
+c) Thành lập, gia nhập, hoạt động trong tổ chức đại diện người lao động, tổ chức nghề nghiệp và tổ chức khác theo quy định của pháp luật; yêu cầu và tham gia đối thoại, thực hiện quy chế dân chủ, thương lượng tập thể với người sử dụng lao động và được tham vấn tại nơi làm việc để bảo vệ quyền và lợi ích hợp pháp, chính đáng của mình; tham gia quản lý theo nội quy của người sử dụng lao động;
+d) Từ chối làm việc nếu có nguy cơ rõ ràng đe dọa trực tiếp đến tính mạng, sức khỏe trong quá trình thực hiện công việc;
+đ) Đơn phương chấm dứt hợp đồng lao động;
+e) Đình công;
+g) Các quyền khác theo quy định của pháp luật.
+2. Người lao động có các nghĩa vụ sau đây:
+a) Thực hiện hợp đồng lao động, thỏa ước lao động tập thể và thỏa thuận hợp pháp khác;",1,C dùng chung chunk với B: Có tên Điều 5 nhưng thiếu câu dẫn khoản 1 cho các điểm c–g; khoản 2 dừng sau điểm a.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P04,4,793,A,A:BLLD-2019:u004:c001,500,"tập thể; tham gia giải quyết tranh chấp lao động, đình công; đối thoại, trao đổi với tổ chức đại diện người lao động về các vấn đề trong quan hệ lao động, cải thiện đời sống vật chất và tinh thần của người lao động;
+d) Đóng cửa tạm thời nơi làm việc;
+đ) Các quyền khác theo quy định của pháp luật.
+2. Người sử dụng lao động có các nghĩa vụ sau đây:
+a) Thực hiện hợp đồng lao động, thỏa ước lao động tập thể và thỏa thuận hợp pháp khác; tôn trọng danh dự, nhân phẩm của người lao động;
+b) Thiết lập cơ",1,Bắt đầu giữa điểm c (không rõ là quyền của ai); khoản 2 điểm b bị cắt.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P04,4,793,B,B:BLLD-2019:u004:c000,798,"Điều 6. Quyền và nghĩa vụ của người sử dụng lao động
+1. Người sử dụng lao động có các quyền sau đây:
+a) Tuyển dụng, bố trí, quản lý, điều hành, giám sát lao động; khen thưởng và xử lý vi phạm kỷ luật lao động;
+b) Thành lập, gia nhập, hoạt động trong tổ chức đại diện người sử dụng lao động, tổ chức nghề nghiệp và tổ chức khác theo quy định của pháp luật;
+c) Yêu cầu tổ chức đại diện người lao động thương lượng với mục đích ký kết thỏa ước lao động tập thể; tham gia giải quyết tranh chấp lao động, đình công; đối thoại, trao đổi với tổ chức đại diện người lao động về các vấn đề trong quan hệ lao động, cải thiện đời sống vật chất và tinh thần của người lao động;
+d) Đóng cửa tạm thời nơi làm việc;
+đ) Các quyền khác theo quy định của pháp luật.
+2. Người sử dụng lao động có các nghĩa vụ sau đây:",2,Tên Điều 6 + trọn khoản 1 (a–đ); câu dẫn khoản 2 treo ở cuối nhưng không làm sai nghĩa.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P04,4,793,C,B:BLLD-2019:u004:c000,798,"Điều 6. Quyền và nghĩa vụ của người sử dụng lao động
+1. Người sử dụng lao động có các quyền sau đây:
+a) Tuyển dụng, bố trí, quản lý, điều hành, giám sát lao động; khen thưởng và xử lý vi phạm kỷ luật lao động;
+b) Thành lập, gia nhập, hoạt động trong tổ chức đại diện người sử dụng lao động, tổ chức nghề nghiệp và tổ chức khác theo quy định của pháp luật;
+c) Yêu cầu tổ chức đại diện người lao động thương lượng với mục đích ký kết thỏa ước lao động tập thể; tham gia giải quyết tranh chấp lao động, đình công; đối thoại, trao đổi với tổ chức đại diện người lao động về các vấn đề trong quan hệ lao động, cải thiện đời sống vật chất và tinh thần của người lao động;
+d) Đóng cửa tạm thời nơi làm việc;
+đ) Các quyền khác theo quy định của pháp luật.
+2. Người sử dụng lao động có các nghĩa vụ sau đây:",2,C dùng chung chunk với B: Tên Điều 6 + trọn khoản 1 (a–đ); câu dẫn khoản 2 treo ở cuối nhưng không làm sai nghĩa.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P05,5,954,A,A:BLLD-2019:u005:c002,500,"hợp pháp của người sử dụng lao động, tham gia xây dựng quan hệ lao động tiến bộ, hài hòa và ổn định.
+Điều 8. Các hành vi bị nghiêm cấm trong lĩnh vực lao động
+1. Phân biệt đối xử trong lao động.
+2. Ngược đãi người lao động, cưỡng bức lao động.
+3. Quấy rối tình dục tại nơi làm việc.
+4. Lợi dụng danh nghĩa dạy nghề, tập nghề để trục lợi, bóc lột sức lao động hoặc lôi kéo, dụ dỗ, ép buộc người học nghề, người tập nghề vào hoạt động trái pháp luật.
+5. Sử dụng lao động chưa qua đào tạo hoặc chưa có c",1,Trộn đuôi Điều 7 (thiếu chủ thể) với Điều 8; khoản 5 Điều 8 bị cắt.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P05,5,954,B,B:BLLD-2019:u005:c001,353,"Điều 7. Xây dựng quan hệ lao động
+4. Phòng Thương mại và Công nghiệp Việt Nam, Liên minh Hợp tác xã Việt Nam và các tổ chức đại diện của người sử dụng lao động khác được thành lập theo quy định của pháp luật có vai trò đại diện, bảo vệ quyền và lợi ích hợp pháp của người sử dụng lao động, tham gia xây dựng quan hệ lao động tiến bộ, hài hòa và ổn định.",2,Tên Điều 7 + trọn khoản 4.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P05,5,954,C,B:BLLD-2019:u005:c001,353,"Điều 7. Xây dựng quan hệ lao động
+4. Phòng Thương mại và Công nghiệp Việt Nam, Liên minh Hợp tác xã Việt Nam và các tổ chức đại diện của người sử dụng lao động khác được thành lập theo quy định của pháp luật có vai trò đại diện, bảo vệ quyền và lợi ích hợp pháp của người sử dụng lao động, tham gia xây dựng quan hệ lao động tiến bộ, hài hòa và ổn định.",2,C dùng chung chunk với B: Tên Điều 7 + trọn khoản 4.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P06,6,742,A,A:BLLD-2019:u006:c001,500,"ở bất kỳ nơi nào mà pháp luật không cấm.
+2. Trực tiếp liên hệ với người sử dụng lao động hoặc thông qua tổ chức dịch vụ việc làm để tìm kiếm việc làm theo nguyện vọng, khả năng, trình độ nghề nghiệp và sức khỏe của mình.
+Điều 11. Tuyển dụng lao động
+1. Người sử dụng lao động có quyền trực tiếp hoặc thông qua tổ chức dịch vụ việc làm, doanh nghiệp hoạt động cho thuê lại lao động để tuyển dụng lao động theo nhu cầu của người sử dụng lao động.
+2. Người lao động không phải trả chi phí cho việc tuyển",1,Trộn đuôi Điều 10 (khoản 1 cụt) và Điều 11; khoản 2 Điều 11 cắt giữa từ.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P06,6,742,B,B:BLLD-2019:u006:c002,294,"Điều 11. Tuyển dụng lao động
+1. Người sử dụng lao động có quyền trực tiếp hoặc thông qua tổ chức dịch vụ việc làm, doanh nghiệp hoạt động cho thuê lại lao động để tuyển dụng lao động theo nhu cầu của người sử dụng lao động.
+2. Người lao động không phải trả chi phí cho việc tuyển dụng lao động.",2,Trọn Điều 11.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P06,6,742,C,B:BLLD-2019:u006:c002,294,"Điều 11. Tuyển dụng lao động
+1. Người sử dụng lao động có quyền trực tiếp hoặc thông qua tổ chức dịch vụ việc làm, doanh nghiệp hoạt động cho thuê lại lao động để tuyển dụng lao động theo nhu cầu của người sử dụng lao động.
+2. Người lao động không phải trả chi phí cho việc tuyển dụng lao động.",2,C dùng chung chunk với B: Trọn Điều 11.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P07,7,1135,A,A:BLLD-2019:u007:c002,500,"hức thông điệp dữ liệu theo quy định của pháp luật về giao dịch điện tử có giá trị như hợp đồng lao động bằng văn bản.
+2. Hai bên có thể giao kết hợp đồng lao động bằng lời nói đối với hợp đồng có thời hạn dưới 01 tháng, trừ trường hợp quy định tại khoản 2 Điều 18, điểm a khoản 1 Điều 145 và khoản 1 Điều 162 của Bộ luật này.
+Điều 15. Nguyên tắc giao kết hợp đồng lao động
+1. Tự nguyện, bình đẳng, thiện chí, hợp tác và trung thực.
+2. Tự do giao kết hợp đồng lao động nhưng không được trái pháp luật",1,Bắt đầu giữa câu khoản 1 Điều 14; Điều 15 khoản 2 bị cắt.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P07,7,1135,B,B:BLLD-2019:u007:c001,623,"Điều 14. Hình thức hợp đồng lao động
+1. Hợp đồng lao động phải được giao kết bằng văn bản và được làm thành 02 bản, người lao động giữ 01 bản, người sử dụng lao động giữ 01 bản, trừ trường hợp quy định tại khoản 2 Điều này.
+Hợp đồng lao động được giao kết thông qua phương tiện điện tử dưới hình thức thông điệp dữ liệu theo quy định của pháp luật về giao dịch điện tử có giá trị như hợp đồng lao động bằng văn bản.
+2. Hai bên có thể giao kết hợp đồng lao động bằng lời nói đối với hợp đồng có thời hạn dưới 01 tháng, trừ trường hợp quy định tại khoản 2 Điều 18, điểm a khoản 1 Điều 145 và khoản 1 Điều 162 của Bộ luật này.",2,Trọn Điều 14.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P07,7,1135,C,B:BLLD-2019:u007:c001,623,"Điều 14. Hình thức hợp đồng lao động
+1. Hợp đồng lao động phải được giao kết bằng văn bản và được làm thành 02 bản, người lao động giữ 01 bản, người sử dụng lao động giữ 01 bản, trừ trường hợp quy định tại khoản 2 Điều này.
+Hợp đồng lao động được giao kết thông qua phương tiện điện tử dưới hình thức thông điệp dữ liệu theo quy định của pháp luật về giao dịch điện tử có giá trị như hợp đồng lao động bằng văn bản.
+2. Hai bên có thể giao kết hợp đồng lao động bằng lời nói đối với hợp đồng có thời hạn dưới 01 tháng, trừ trường hợp quy định tại khoản 2 Điều 18, điểm a khoản 1 Điều 145 và khoản 1 Điều 162 của Bộ luật này.",2,C dùng chung chunk với B: Trọn Điều 14.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P08,8,1070,A,A:BLLD-2019:u008:c002,500,"y quyền ký kết phải kèm theo danh sách ghi rõ họ tên, ngày tháng năm sinh, giới tính, nơi cư trú và chữ ký của từng người lao động.
+3. Người giao kết hợp đồng lao động bên phía người sử dụng lao động là người thuộc một trong các trường hợp sau đây:
+a) Người đại diện theo pháp luật của doanh nghiệp hoặc người được ủy quyền theo quy định của pháp luật;
+b) Người đứng đầu cơ quan, tổ chức có tư cách pháp nhân theo quy định của pháp luật hoặc người được ủy quyền theo quy định của pháp luật;
+c) Người ",1,Bắt đầu giữa câu ('y quyền ký kết...'); điểm c khoản 3 bị cắt.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P08,8,1070,B,B:BLLD-2019:u008:c001,762,"Điều 18. Thẩm quyền giao kết hợp đồng lao động
+1. Người lao động trực tiếp giao kết hợp đồng lao động, trừ trường hợp quy định tại khoản 2 Điều này.
+2. Đối với công việc theo mùa vụ, công việc nhất định có thời hạn dưới 12 tháng thì nhóm người lao động từ đủ 18 tuổi trở lên có thể ủy quyền cho một người lao động trong nhóm để giao kết hợp đồng lao động; trong trường hợp này, hợp đồng lao động phải được giao kết bằng văn bản và có hiệu lực như giao kết với từng người lao động.
+Hợp đồng lao động do người được ủy quyền ký kết phải kèm theo danh sách ghi rõ họ tên, ngày tháng năm sinh, giới tính, nơi cư trú và chữ ký của từng người lao động.
+3. Người giao kết hợp đồng lao động bên phía người sử dụng lao động là người thuộc một trong các trường hợp sau đây:",2,Tên Điều 18 + trọn khoản 1–2; câu dẫn khoản 3 treo ở cuối.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P08,8,1070,C,B:BLLD-2019:u008:c001,762,"Điều 18. Thẩm quyền giao kết hợp đồng lao động
+1. Người lao động trực tiếp giao kết hợp đồng lao động, trừ trường hợp quy định tại khoản 2 Điều này.
+2. Đối với công việc theo mùa vụ, công việc nhất định có thời hạn dưới 12 tháng thì nhóm người lao động từ đủ 18 tuổi trở lên có thể ủy quyền cho một người lao động trong nhóm để giao kết hợp đồng lao động; trong trường hợp này, hợp đồng lao động phải được giao kết bằng văn bản và có hiệu lực như giao kết với từng người lao động.
+Hợp đồng lao động do người được ủy quyền ký kết phải kèm theo danh sách ghi rõ họ tên, ngày tháng năm sinh, giới tính, nơi cư trú và chữ ký của từng người lao động.
+3. Người giao kết hợp đồng lao động bên phía người sử dụng lao động là người thuộc một trong các trường hợp sau đây:",2,C dùng chung chunk với B: Tên Điều 18 + trọn khoản 1–2; câu dẫn khoản 3 treo ở cuối.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P09,9,987,A,A:BLLD-2019:u009:c002,500,"áng kể từ thời điểm có hiệu lực của hợp đồng.
+2. Khi hợp đồng lao động quy định tại điểm b khoản 1 Điều này hết hạn mà người lao động vẫn tiếp tục làm việc thì thực hiện như sau:
+a) Trong thời hạn 30 ngày kể từ ngày hợp đồng lao động hết hạn, hai bên phải ký kết hợp đồng lao động mới; trong thời gian chưa ký kết hợp đồng lao động mới thì quyền, nghĩa vụ và lợi ích của hai bên được thực hiện theo hợp đồng đã giao kết;
+b) Nếu hết thời hạn 30 ngày kể từ ngày hợp đồng lao động hết hạn mà hai bên khô",0,Điểm b khoản 2 Điều 20 bị cắt ngay trước hệ quả 'trở thành HĐLĐ không xác định thời hạn' -> mất ý chính (đúng lỗi của q02).,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P09,9,987,B,B:BLLD-2019:u009:c001,589,"Điều 20. Loại hợp đồng lao động
+1. Hợp đồng lao động phải được giao kết theo một trong các loại sau đây:
+a) Hợp đồng lao động không xác định thời hạn là hợp đồng mà trong đó hai bên không xác định thời hạn, thời điểm chấm dứt hiệu lực của hợp đồng;
+b) Hợp đồng lao động xác định thời hạn là hợp đồng mà trong đó hai bên xác định thời hạn, thời điểm chấm dứt hiệu lực của hợp đồng trong thời gian không quá 36 tháng kể từ thời điểm có hiệu lực của hợp đồng.
+2. Khi hợp đồng lao động quy định tại điểm b khoản 1 Điều này hết hạn mà người lao động vẫn tiếp tục làm việc thì thực hiện như sau:",2,Tên Điều 20 + trọn khoản 1; câu dẫn khoản 2 treo ở cuối.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P09,9,987,C,B:BLLD-2019:u009:c001,589,"Điều 20. Loại hợp đồng lao động
+1. Hợp đồng lao động phải được giao kết theo một trong các loại sau đây:
+a) Hợp đồng lao động không xác định thời hạn là hợp đồng mà trong đó hai bên không xác định thời hạn, thời điểm chấm dứt hiệu lực của hợp đồng;
+b) Hợp đồng lao động xác định thời hạn là hợp đồng mà trong đó hai bên xác định thời hạn, thời điểm chấm dứt hiệu lực của hợp đồng trong thời gian không quá 36 tháng kể từ thời điểm có hiệu lực của hợp đồng.
+2. Khi hợp đồng lao động quy định tại điểm b khoản 1 Điều này hết hạn mà người lao động vẫn tiếp tục làm việc thì thực hiện như sau:",2,C dùng chung chunk với B: Tên Điều 20 + trọn khoản 1; câu dẫn khoản 2 treo ở cuối.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P10,10,870,A,A:BLLD-2019:u010:c001,500," hạn của hợp đồng lao động;
+đ) Mức lương theo công việc hoặc chức danh, hình thức trả lương, thời hạn trả lương, phụ cấp lương và các khoản bổ sung khác;
+e) Chế độ nâng bậc, nâng lương;
+g) Thời giờ làm việc, thời giờ nghỉ ngơi;
+h) Trang bị bảo hộ lao động cho người lao động;
+i) Bảo hiểm xã hội, bảo hiểm y tế và bảo hiểm thất nghiệp;
+k) Đào tạo, bồi dưỡng, nâng cao trình độ, kỹ năng nghề.
+2. Khi người lao động làm việc có liên quan trực tiếp đến bí mật kinh doanh, bí mật công nghệ theo quy định c",1,Danh sách điểm đ–k không có câu dẫn (nội dung chủ yếu của HĐLĐ); khoản 2 bị cắt.,Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P10,10,870,B,B:BLLD-2019:u010:c001,760,"Điều 21. Nội dung hợp đồng lao động
+k) Đào tạo, bồi dưỡng, nâng cao trình độ, kỹ năng nghề.
+2. Khi người lao động làm việc có liên quan trực tiếp đến bí mật kinh doanh, bí mật công nghệ theo quy định của pháp luật thì người sử dụng lao động có quyền thỏa thuận bằng văn bản với người lao động về nội dung, thời hạn bảo vệ bí mật kinh doanh, bảo vệ bí mật công nghệ, quyền lợi và việc bồi thường trong trường hợp vi phạm.
+3. Đối với người lao động làm việc trong lĩnh vực nông nghiệp, lâm nghiệp, ngư nghiệp, diêm nghiệp thì tùy theo loại công việc mà hai bên có thể giảm một số nội dung chủ yếu của hợp đồng lao động và thỏa thuận bổ sung nội dung về phương thức giải quyết trong trường hợp thực hiện hợp đồng chịu ảnh hưởng của thiên tai, hỏa hoạn, thời tiết.",1,"Có tên Điều 21, khoản 2–3 trọn ý, nhưng mở đầu bằng điểm k mồ côi (thiếu câu dẫn khoản 1).",Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)
+P10,10,870,C,B:BLLD-2019:u010:c001,760,"Điều 21. Nội dung hợp đồng lao động
+k) Đào tạo, bồi dưỡng, nâng cao trình độ, kỹ năng nghề.
+2. Khi người lao động làm việc có liên quan trực tiếp đến bí mật kinh doanh, bí mật công nghệ theo quy định của pháp luật thì người sử dụng lao động có quyền thỏa thuận bằng văn bản với người lao động về nội dung, thời hạn bảo vệ bí mật kinh doanh, bảo vệ bí mật công nghệ, quyền lợi và việc bồi thường trong trường hợp vi phạm.
+3. Đối với người lao động làm việc trong lĩnh vực nông nghiệp, lâm nghiệp, ngư nghiệp, diêm nghiệp thì tùy theo loại công việc mà hai bên có thể giảm một số nội dung chủ yếu của hợp đồng lao động và thỏa thuận bổ sung nội dung về phương thức giải quyết trong trường hợp thực hiện hợp đồng chịu ảnh hưởng của thiên tai, hỏa hoạn, thời tiết.",1,"C dùng chung chunk với B: Có tên Điều 21, khoản 2–3 trọn ý, nhưng mở đầu bằng điểm k mồ côi (thiếu câu dẫn khoản 1).",Claude (nháp); Đào Quang Huy (đã rà soát 13/11/2026)

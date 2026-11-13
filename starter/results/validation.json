@@ -1,0 +1,30 @@
+{
+  "units_articles_1_to_220_once": true,
+  "units_never_cross_chapter": true,
+  "units_char_count_matches_text": true,
+  "units_counted_ge_1500": 82,
+  "units_counted_ge_30": true,
+  "manifest_chars_match_units": true,
+  "chunks_A": {
+    "count": 451,
+    "text_equals_source_span": true,
+    "chapter_matches_unit": true,
+    "uncovered_non_newline_chars": 0,
+    "unique_ids": true,
+    "chunks_spanning_multiple_articles": 134
+  },
+  "chunks_B": {
+    "count": 361,
+    "text_equals_source_span": true,
+    "chapter_matches_unit": true,
+    "uncovered_non_newline_chars": 0,
+    "unique_ids": true,
+    "chunks_spanning_multiple_articles": 0
+  },
+  "chunks_B_never_cross_article": true,
+  "benchmark_evidence_at_gold_page": true,
+  "store_A_matches_chunk_file": true,
+  "store_B_matches_chunk_file": true,
+  "all_passed": true,
+  "run_at": "2026-11-13T17:58:15+07:00"
+}

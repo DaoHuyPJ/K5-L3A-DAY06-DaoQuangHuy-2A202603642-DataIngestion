@@ -1,0 +1,154 @@
+{
+  "run_at": "2026-11-13T17:50:00+07:00",
+  "split": "test",
+  "embedding": {
+    "provider": "local / sentence-transformers",
+    "model": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "dimensions": 384,
+    "max_seq_length": 512,
+    "document_prefix": "passage: ",
+    "query_prefix": "query: ",
+    "normalized": true,
+    "device": "cpu",
+    "sentence_transformers_version": "6.3.0",
+    "torch_version": "2.15.0+cpu",
+    "cost_usd": 0.0
+  },
+  "vector_store": {
+    "chromadb": "1.5.9",
+    "path": "E:\\DataVinUni\\K5-L3A-DAY06-DaoQuangHuy-2A202603642-DataIngestion\\starter\\vectorstore"
+  },
+  "ann_equals_exact_top3": "18/18",
+  "strategies": {
+    "A": {
+      "chunking": "fixed_size",
+      "chunk_size": 500,
+      "overlap": 50,
+      "index": "A",
+      "filter": false,
+      "description": "Cửa sổ 500 ký tự, overlap 50, không theo cấu trúc; không lọc"
+    },
+    "B": {
+      "chunking": "by_paragraph",
+      "chunk_size": 800,
+      "overlap": 0,
+      "index": "B",
+      "filter": false,
+      "description": "Gom đoạn trong cùng một Điều, tối đa 800 ký tự, thêm tên Điều cho chunk tiếp nối; không lọc"
+    },
+    "C": {
+      "chunking": "by_paragraph",
+      "chunk_size": 800,
+      "overlap": 0,
+      "index": "B",
+      "filter": true,
+      "description": "Giống hệt B (cùng index) + lọc theo `chapter` khi câu hỏi có filter"
+    }
+  },
+  "metrics": {
+    "A": {
+      "all": {
+        "N": 6,
+        "hit_at_1": 3,
+        "hit_at_3": 4,
+        "hit_at_1_rate": 0.5,
+        "hit_at_3_rate": 0.6667,
+        "hit_at_1_str": "3/6",
+        "hit_at_3_str": "4/6",
+        "filter_queries": 2,
+        "filter_compliant": 1,
+        "evidence_split_suspected": [
+          "t05"
+        ],
+        "missed_ids": [
+          "t05",
+          "t06"
+        ]
+      },
+      "test": {
+        "N": 6,
+        "hit_at_1": 3,
+        "hit_at_3": 4,
+        "hit_at_1_rate": 0.5,
+        "hit_at_3_rate": 0.6667,
+        "hit_at_1_str": "3/6",
+        "hit_at_3_str": "4/6",
+        "filter_queries": 2,
+        "filter_compliant": 1,
+        "evidence_split_suspected": [
+          "t05"
+        ],
+        "missed_ids": [
+          "t05",
+          "t06"
+        ]
+      }
+    },
+    "B": {
+      "all": {
+        "N": 6,
+        "hit_at_1": 5,
+        "hit_at_3": 5,
+        "hit_at_1_rate": 0.8333,
+        "hit_at_3_rate": 0.8333,
+        "hit_at_1_str": "5/6",
+        "hit_at_3_str": "5/6",
+        "filter_queries": 2,
+        "filter_compliant": 1,
+        "evidence_split_suspected": [],
+        "missed_ids": [
+          "t06"
+        ]
+      },
+      "test": {
+        "N": 6,
+        "hit_at_1": 5,
+        "hit_at_3": 5,
+        "hit_at_1_rate": 0.8333,
+        "hit_at_3_rate": 0.8333,
+        "hit_at_1_str": "5/6",
+        "hit_at_3_str": "5/6",
+        "filter_queries": 2,
+        "filter_compliant": 1,
+        "evidence_split_suspected": [],
+        "missed_ids": [
+          "t06"
+        ]
+      }
+    },
+    "C": {
+      "all": {
+        "N": 6,
+        "hit_at_1": 6,
+        "hit_at_3": 6,
+        "hit_at_1_rate": 1.0,
+        "hit_at_3_rate": 1.0,
+        "hit_at_1_str": "6/6",
+        "hit_at_3_str": "6/6",
+        "filter_queries": 2,
+        "filter_compliant": 2,
+        "evidence_split_suspected": [],
+        "missed_ids": []
+      },
+      "test": {
+        "N": 6,
+        "hit_at_1": 6,
+        "hit_at_3": 6,
+        "hit_at_1_rate": 1.0,
+        "hit_at_3_rate": 1.0,
+        "hit_at_1_str": "6/6",
+        "hit_at_3_str": "6/6",
+        "filter_queries": 2,
+        "filter_compliant": 2,
+        "evidence_split_suspected": [],
+        "missed_ids": []
+      }
+    }
+  },
+  "mean_search_ms": {
+    "A": 16.17,
+    "B": 9.01,
+    "C": 2.69
+  }
+}
