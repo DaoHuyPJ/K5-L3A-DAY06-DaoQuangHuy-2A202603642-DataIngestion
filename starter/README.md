@@ -10,10 +10,10 @@ Báo cáo: [report/individual/2A202603642_DaoQuangHuy.md](../report/individual/2
 
 ## Cấu trúc
 
+Theo [SUBMISSION.md](../SUBMISSION.md): mã nguồn trong `starter/src/`; dữ liệu, benchmark và kết quả ở thư mục gốc repo.
+
 ```text
-starter/
-├── requirements.txt          # phiên bản đã dùng cho lần chạy báo cáo
-├── .env.example              # copy thành .env
+<repo>/
 ├── data/
 │   ├── raw/                  # snapshot HTML toàn văn + PDF scan chính thức (đối chiếu)
 │   ├── processed/units.jsonl # 84 đơn vị trang đã chuẩn hóa (page = số đơn vị)
@@ -21,27 +21,32 @@ starter/
 ├── benchmark/
 │   ├── questions.json        # 23 câu (17 dev / 6 test), gold page + evidence + filter
 │   └── verification.json     # kiểm chứng evidence trước khi chạy
-├── src/
-│   ├── ingestion.py          # đọc HTML/PDF, chuẩn hóa NFC, dựng đơn vị trang
-│   ├── chunking.py           # A: fixed-size · B: theo đoạn trong từng Điều
-│   ├── embeddings.py         # E5 local (prefix query:/passage:, normalize)
-│   ├── store.py              # Chroma: upsert idempotent, search + where filter, exact check
-│   ├── evaluation.py         # Hit@1 / Evidence Hit@3, trace, summarize
-│   ├── hybrid.py             # mở rộng: BM25 tự cài + weighted RRF
-│   └── run.py                # CLI điều phối toàn bộ pipeline
 ├── results/
 │   ├── logs/ingest_log.json  # trang PDF không có text, phần bị loại, cảnh báo
 │   ├── chunks/               # toàn bộ chunk A/B kèm metadata
 │   ├── index_report.json     # model, phiên bản, số chunk, độ dài, thời gian, chi phí
 │   ├── reindex_check.json    # nạp lại không nhân đôi + xóa chunk cũ khi tài liệu đổi
 │   ├── selection.md          # lựa chọn chiến lược, chốt trên dev trước khi chạy test
-│   ├── validation.json       # kết quả `validate`
-│   ├── analysis.json         # kết quả `analyze`
-│   ├── hybrid/               # sweep trọng số trên dev + trace hybrid
 │   ├── traces/               # top-3 đầy đủ cho từng câu × chiến lược
 │   ├── metrics_dev.json / metrics_test.json
-│   └── manual/               # nhãn coherence / metadata / grounding
-└── vectorstore/              # Chroma (không commit; tạo lại bằng `index`)
+│   ├── manual/               # nhãn coherence / metadata / grounding
+│   ├── validation.json       # kết quả `validate`
+│   ├── analysis.json         # kết quả `analyze`
+│   └── hybrid/               # sweep trọng số trên dev + trace hybrid
+├── artifacts/experiment_log.csv
+├── report/individual/2A202603642_DaoQuangHuy.md
+└── starter/
+    ├── requirements.txt      # phiên bản đã dùng cho lần chạy báo cáo
+    ├── .env.example          # copy thành .env
+    ├── src/
+    │   ├── ingestion.py      # đọc HTML/PDF, chuẩn hóa NFC, dựng đơn vị trang
+    │   ├── chunking.py       # A: fixed-size · B: theo đoạn trong từng Điều
+    │   ├── embeddings.py     # E5 local (prefix query:/passage:, normalize)
+    │   ├── store.py          # Chroma: upsert idempotent, search + where filter, exact check
+    │   ├── evaluation.py     # Hit@1 / Evidence Hit@3, trace, summarize
+    │   ├── hybrid.py         # mở rộng: BM25 tự cài + weighted RRF
+    │   └── run.py            # CLI điều phối toàn bộ pipeline
+    └── vectorstore/          # Chroma (không commit; tạo lại bằng `index`)
 ```
 
 ## Setup (Windows PowerShell; macOS/Linux tương tự)
@@ -64,7 +69,7 @@ Model được tải tự động từ Hugging Face trong lần chạy đầu (~
 ## Chạy
 
 ```powershell
-python -m src.run ingest          # HTML -> data/processed/units.jsonl, data/manifest.json
+python -m src.run ingest          # ../data/raw -> ../data/processed/units.jsonl, ../data/manifest.json
 python -m src.run benchmark       # kiểm chứng evidence, điền gold_page (đã chạy trước thí nghiệm)
 python -m src.run index           # chunk A, B -> embed -> upsert Chroma
 python -m src.run reindex-check   # nạp lại cùng phiên bản + mô phỏng tài liệu đổi
@@ -76,7 +81,7 @@ python -m src.run analyze         # phân tích theo loại câu, MRR, token, la
 python -m src.run hybrid          # mở rộng: BM25 + dense (RRF), chỉnh trọng số trên dev
 ```
 
-Lưu ý: `audit-sheets` từ chối ghi đè khi `results/manual/*.csv` đã có nhãn (cần `--force`).
+Lưu ý: lệnh chạy từ `starter/`, kết quả ghi vào `../results/`. `audit-sheets` từ chối ghi đè khi `results/manual/*.csv` đã có nhãn (cần `--force`).
 
 ## Ba chiến lược
 

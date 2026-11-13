@@ -2,7 +2,7 @@
 
 **Đào Quang Huy · 2A202603642 · L3A** — Corpus: Bộ luật Lao động 2019 · Store: Chroma · Embedding: multilingual-e5-small
 
-Mọi đường dẫn bên dưới tính từ thư mục `starter/`. Lệnh tái lập: xem [starter/README.md](../../starter/README.md).
+Mọi đường dẫn bên dưới tính từ thư mục gốc repo (`data/`, `benchmark/`, `results/`; mã nguồn ở `starter/src/`). Lệnh setup/chạy: [README.md](../../README.md) và [starter/README.md](../../starter/README.md).
 
 ## Dữ liệu và pipeline
 
@@ -31,7 +31,7 @@ Mọi đường dẫn bên dưới tính từ thư mục `starter/`. Lệnh tái
 
 ## Cấu hình và benchmark
 
-- **A / B / C** (`STRATEGIES` trong `src/run.py`):
+- **A / B / C** (`STRATEGIES` trong `starter/src/run.py`):
   - **A**: cửa sổ cố định 500 ký tự, overlap 50, không theo cấu trúc, không lọc. 451 chunk, trung bình 460 ký tự.
   - **B**: gom các đoạn liên tiếp **trong cùng một Điều**, tối đa 800 ký tự; đoạn quá dài thì tách theo câu (`.;:`); chunk tiếp nối được thêm dòng tên Điều (141/361 chunk); không lọc. 361 chunk, trung bình 548 ký tự.
   - **C**: dùng chính index của B; **khác biệt duy nhất B–C** là `where chapter = …` khi câu hỏi có filter. Câu không có filter chạy y hệt B.
@@ -94,7 +94,7 @@ Mọi đường dẫn bên dưới tính từ thư mục `starter/`. Lệnh tái
 
 ## Mở rộng tùy chọn: hybrid BM25 + dense
 
-`python -m src.run hybrid` → `results/hybrid/` (`src/hybrid.py`).
+`python -m src.run hybrid` → `results/hybrid/` (`starter/src/hybrid.py`).
 - Cách làm: giữ nguyên chunk, metadata và filter của C; thêm BM25 (Okapi, k1 = 1,5, b = 0,75, token theo âm tiết, tự cài đặt); gộp với dense bằng weighted RRF (k = 60, mỗi danh sách lấy top-20).
 - Tham số: chỉ chỉnh trọng số BM25 `w ∈ {0; 0,25; 0,5; 0,75; 1; 1,5; 2}`, **chỉ trên dev**. Quy tắc định trước: Hit@3 dev cao nhất → Hit@1 → trọng số nhỏ nhất.
 

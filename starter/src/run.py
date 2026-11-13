@@ -39,10 +39,11 @@ from .evaluation import evaluate_query, summarize
 from .ingestion import load_pdf, normalize_for_match, parse_law_html, build_units
 from .models import Chunk, DocumentPage
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
-RESULTS = ROOT / "results"
-BENCH = ROOT / "benchmark"
+ROOT = Path(__file__).resolve().parents[1]          # starter/  (.env, vectorstore/)
+REPO = ROOT.parent                                  # repository root (SUBMISSION.md layout)
+DATA = REPO / "data"
+RESULTS = REPO / "results"
+BENCH = REPO / "benchmark"
 
 DOCUMENT = {
     "source_id": "BLLD-2019",
@@ -171,7 +172,7 @@ def cmd_ingest(_: argparse.Namespace) -> None:
             "version_note": ("Văn bản gốc năm 2019 như được ban hành; KHÔNG phải văn bản hợp nhất. "
                              "Một số điều đã được sửa đổi về sau; corpus không phản ánh các sửa đổi đó."),
             "source_path_or_url": DOCUMENT["html_url"],
-            "local_snapshot": str(DOCUMENT["html_path"].relative_to(ROOT)).replace("\\", "/"),
+            "local_snapshot": str(DOCUMENT["html_path"].relative_to(REPO)).replace("\\", "/"),
             "reference_official_pdf": DOCUMENT["official_pdf_url"],
             "license_or_permission": ("Văn bản quy phạm pháp luật không thuộc đối tượng bảo hộ quyền tác giả "
                                       "(Điều 15 khoản 2 Luật Sở hữu trí tuệ 2005, sửa đổi). Bản HTML do Trang "
